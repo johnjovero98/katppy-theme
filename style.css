@@ -615,25 +615,23 @@ video {
   visibility: visible;
 }
 
-.static {
-  position: static;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.hidden {
-  display: none;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .size-4 {
-  width: 54px;
-  height: 54px;
+  width: 3rem;
+  height: 3rem;
 }
 
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.size-6 {
+  width: 6rem;
+  height: 6rem;
+}
+
+.p-3 {
+  padding: 1.5rem;
 }
 
 /* ___________end of tailwindcss preflight____________ */
@@ -660,8 +658,8 @@ header .wc-block-mini-cart__button {
 }
 
 header .wc-block-mini-cart__button .wc-block-mini-cart__icon {
-  height: 54px;
-  width: 54px;
+  height: 3rem;
+  width: 3rem;
 }
 
 header .wc-block-mini-cart__button .wc-block-mini-cart__badge {

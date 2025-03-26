@@ -1,22 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './**/*.php',
-    './template-parts/**/*.php',
-    './inc/**/*.php',
-    './assets/js/**/*.js',
-    './assets/css/**/*.css',
+    "./*.{php,html,js}",
+    "./template-parts/*.{php,html,js}",
+    "./woocommerce/**/*.php",
+    "./woocommerce/cart/**/*.php",
+    "./woocommerce/single-product/**/*.php",
+    "./woocommerce/checkout/**/*.php",
   ],
   theme: {  
     spacing:{
       '0':'0px',
-      '1': '8px',
-      '2': '13.5px',
-      '3': '27px',
-      '4': '54px',
-      '5': '81px',
-      '6': '108px',
-      '7': '135px',
+      '1': '.375rem',
+      '2': '.75rem',
+      '3': '1.5rem',
+      '4': '3rem',
+      '5': '4.5rem',
+      '6': '6rem',
+      '7': '7.5rem',
     },
     
     fontSize:{
