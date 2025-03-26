@@ -248,3 +248,51 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     @apply hover:bg-gold-300;
 }
 
+
+/* tab section styles */
+.product-detail-page .woocommerce-tabs.wc-tabs-wrapper  {
+    @apply mb-5;
+}
+
+.product-detail-page div.product .woocommerce-tabs ul.tabs {
+    list-style: none;
+    padding: 0 0.75rem;
+    margin: 0 1.5rem;
+    position: relative;
+    white-space: nowrap;
+    overflow-x: auto;
+
+
+}
+
+.product-detail-page div.product .woocommerce-tabs ul.tabs li {
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    margin: 0 -5px;
+    padding: 0 1em;
+    @apply cursor-pointer;
+    @apply border-2 border-solid border-gold-500;
+    @apply bg-gold-100;
+    @apply rounded-t-lg;
+    @apply border-b-gold-100
+}
+
+.product-detail-page div.product .woocommerce-tabs ul.tabs li a,
+.product-detail-page div.product .woocommerce-tabs ul.tabs li.active a {
+    @apply text-black;
+}
+
+.product-detail-page div.product .woocommerce-tabs ul.tabs li.active {
+    z-index: 2;
+    @apply bg-gold-500;
+    @apply border-b-gold-500
+}
+
+.product-detail-page div.product .woocommerce-tabs .panel {
+    @apply border-2 border-solid border-gold-500;
+    @apply p-3 rounded-lg shadow-lg;
+    @apply m-[-2px];
+    position: relative;
+    z-index: 3;
+}
