@@ -30,18 +30,52 @@
 	// mobile navigation on page load state
 	if (window.innerWidth < 1024) {
 		siteNavigation.classList.add('is-mobile');
+		siteNavigation.setAttribute("aria-hidden", "true");
+
+
+		siteNavigation.classList.remove('is-desktop');
+	}
+
+	if (window.innerWidth >= 1024) {
+		siteNavigation.classList.remove('is-mobile');
+		siteNavigation.classList.remove('show-mobile-menu');
+		siteNavigation.classList.remove('toggled');
+		overlay.classList.remove('show-overlay');
+
+		// aria attributes toggle
+		siteNavigation.setAttribute("aria-hidden", "false");
+		menuButton.setAttribute('aria-expanded', 'false');
+
+		siteNavigation.classList.add('is-desktop');
 	}
 
 	// remove "is-mobile" class on window resize  < 1024px
 	window.addEventListener('resize', function () {
 		if (window.innerWidth >= 1024) {
+			// UI state
+			siteNavigation.classList.add('is-desktop');
 			siteNavigation.classList.remove('is-mobile');
 			siteNavigation.classList.remove('show-mobile-menu');
 			siteNavigation.classList.remove('toggled');
 			overlay.classList.remove('show-overlay');
+
+			// aria attributes toggle
+			siteNavigation.setAttribute("aria-hidden", "false");
 			menuButton.setAttribute('aria-expanded', 'false');
+
 		} else {
+			// UI state
 			siteNavigation.classList.add('is-mobile');
+			siteNavigation.classList.remove('is-desktop');
+			siteNavigation.classList.remove('show-mobile-menu');
+			siteNavigation.classList.remove('toggled');
+
+			overlay.classList.remove('show-overlay');
+			
+			// ARIA attributes toggle
+			siteNavigation.setAttribute("aria-hidden", "true");
+			menuButton.setAttribute('aria-expanded', 'false');
+			closeButton.setAttribute('aria-expanded', 'false');
 		}
 	});
 

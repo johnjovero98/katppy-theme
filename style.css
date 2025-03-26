@@ -577,6 +577,44 @@ video {
   display: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.size-4 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.max-w-\[9rem\] {
+  max-width: 9rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-3 {
+  gap: 1.5rem;
+}
+
+.p-3 {
+  padding: 1.5rem;
+}
+
 .container {
   width: 100%;
 }
@@ -610,33 +648,6 @@ video {
     max-width: 1536px;
   }
 }
-
-.visible {
-  visibility: visible;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.size-4 {
-  width: 3rem;
-  height: 3rem;
-}
-
-.size-6 {
-  width: 6rem;
-  height: 6rem;
-}
-
-.p-3 {
-  padding: 1.5rem;
-}
-
-/* ___________end of tailwindcss preflight____________ */
-
-/* ___________custom styles____________ */
 
 /* ___________global styles____________ */
 
@@ -732,5 +743,44 @@ header .main-navigation.is-mobile.show-mobile-menu {
 
 header .main-navigation.is-desktop {
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-grow: 1;
 }
 
+header .main-navigation.is-desktop .search-bar-container {
+  flex-grow: 1;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container {
+  order: -1;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu > .menu-item {
+  position: relative;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu > .menu-item .sub-menu {
+  position: absolute;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+  padding: 1.5rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 1024px) {
+  .lg\:hidden {
+    display: none;
+  }
+}

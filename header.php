@@ -28,7 +28,7 @@
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'katppy-theme'); ?></a>
 
 		<header id="masthead" class="site-header">
-			<div class="container mx-auto p-3">
+			<div class="container mx-auto p-3 flex justify-between items-center gap-3">
 				<!-- Navigation button -->
 				<button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
@@ -37,7 +37,7 @@
 				</button>
 
 				<!-- Site Logo -->
-				<div class="site-branding">
+				<div class="site-branding max-w-[9rem]">
 					<?php
 					the_custom_logo();
 					if (is_front_page() && is_home()) :
@@ -61,7 +61,7 @@
 				<div id="overlay" class="overlay"></div><!-- mobile overlay -->
 				<nav id="site-navigation" class="main-navigation" aria-hidden="true">
 					<!-- close button -->
-					<button id="close-button" class="close-button" aria-controls="site-navigation" aria-expanded="false">
+					<button id="close-button" class="lg:hidden" aria-controls="site-navigation" aria-expanded="false">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
 						</svg>

@@ -22,13 +22,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 /* ___________initialize tailwindcss____________ */
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
-/* ___________end of tailwindcss preflight____________ */
-
-
-
-/* ___________custom styles____________ */
+@tailwind components;
 
 /* ___________global styles____________ */
 :root {
@@ -55,7 +50,7 @@ header .wc-block-mini-cart__button .wc-block-mini-cart__badge {
 }
 
 
-/* menu  button */ 
+/* menu  button */
 header .menu-toggle {
     @apply block lg:hidden;
 }
@@ -90,5 +85,28 @@ header .main-navigation.is-mobile.show-mobile-menu {
 /* desktop navigation */
 header .main-navigation.is-desktop {
     @apply bg-transparent;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-grow: 1;
 }
 
+header .main-navigation.is-desktop .search-bar-container {
+    @apply flex-grow;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container {
+    @apply -order-1
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu {
+    @apply flex gap-3 items-center;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu > .menu-item {
+    @apply relative;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu > .menu-item .sub-menu {
+    @apply absolute whitespace-nowrap bg-gold-100 rounded-lg shadow-lg p-3;
+}
