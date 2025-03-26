@@ -29,6 +29,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 :root {
     font-size: 18px;
     line-height: 1.5;
+    @apply font-body;
+}
+
+h1,h2,h3 {
+    @apply font-heading;
 }
 
 body {
@@ -100,15 +105,15 @@ header .main-navigation.is-desktop .menu-navigation-links-container {
     @apply -order-1
 }
 
-header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu {
+header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu {
     @apply flex gap-3 items-center;
 }
 
-header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu > .menu-item {
+header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item {
     @apply relative;
 }
 
-header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu > .menu-item .sub-menu {
+header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item .sub-menu {
     @apply absolute whitespace-nowrap bg-gold-100 rounded-lg shadow-lg top-full;
     @apply z-10;
     @apply max-h-0 overflow-hidden;
@@ -135,3 +140,33 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 
+/* ___________product detail page styles____________ */
+/* reset */
+.product-detail-page {
+    @apply container mx-auto px-3;
+}
+
+.product-detail-page .woocommerce-breadcrumb {
+    @apply my-4 text-gray-300;
+}
+
+.product-detail-page .summary.entry-summary{
+    @apply w-full;
+}
+
+.product-detail-page #wpgs-gallery {
+    margin: 0 !important;
+    @apply relative;
+}
+
+.product-detail-page .product-details-container {
+    @apply flex flex-col md:flex-row gap-3;
+    @apply mb-5;
+}
+
+
+.product-detail-page ::before,
+.product-detail-page ::after {
+    content: none;
+    display: none !important;
+}

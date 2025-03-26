@@ -205,7 +205,7 @@ add_action('wp_enqueue_scripts', 'katppy_theme_scripts');
 function remove_woocommerce_styles()
 {
 	if (is_product()) {
-		wp_dequeue_style('woocommerce-general'); // Main WooCommerce CSS
+		wp_enqueue_style('woocommerce-general'); // Main WooCommerce CSS
 		wp_dequeue_style('woocommerce-layout'); // Layout-related styles
 		wp_dequeue_style('woocommerce-smallscreen'); // Small screen styles
 	}

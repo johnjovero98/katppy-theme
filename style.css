@@ -660,6 +660,11 @@ video {
 :root {
   font-size: 18px;
   line-height: 1.5;
+  font-family: "Montserrat", san-serif;
+}
+
+h1,h2,h3 {
+  font-family: "Chewy", serif;
 }
 
 body {
@@ -764,17 +769,17 @@ header .main-navigation.is-desktop .menu-navigation-links-container {
   order: -1;
 }
 
-header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu {
+header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu > .menu-item {
+header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item {
   position: relative;
 }
 
-header .main-navigation.is-desktop .menu-navigation-links-container > #primary-menu > .menu-item .sub-menu {
+header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item .sub-menu {
   position: absolute;
   top: 100%;
   white-space: nowrap;
@@ -818,6 +823,89 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
   max-height: 500px !important;
 }
 
+/* ___________product detail page styles____________ */
+
+/* reset */
+
+.product-detail-page {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .product-detail-page {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-detail-page {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-detail-page {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .product-detail-page {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .product-detail-page {
+    max-width: 1536px;
+  }
+}
+
+.product-detail-page {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.product-detail-page .woocommerce-breadcrumb {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.product-detail-page .summary.entry-summary {
+  width: 100%;
+}
+
+.product-detail-page #wpgs-gallery {
+  margin: 0 !important;
+  position: relative;
+}
+
+.product-detail-page .product-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .product-detail-page .product-details-container {
+    flex-direction: row;
+  }
+}
+
+.product-detail-page .product-details-container {
+  margin-bottom: 4.5rem;
+}
+
+.product-detail-page ::before,
+.product-detail-page ::after {
+  content: none;
+  display: none !important;
+}
+
 @media (min-width: 1024px) {
   .lg\:mr-6 {
     margin-right: 6rem;
@@ -827,5 +915,3 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     display: none;
   }
 }
-
-
