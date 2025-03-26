@@ -101,6 +101,9 @@ function katppy_theme_setup()
 			'flex-height' => true,
 		)
 	);
+
+	// Add WooCommerce support
+	add_theme_support('woocommerce');
 }
 add_action('after_setup_theme', 'katppy_theme_setup');
 
@@ -116,6 +119,7 @@ function katppy_theme_content_width()
 	$GLOBALS['content_width'] = apply_filters('katppy_theme_content_width', 640);
 }
 add_action('after_setup_theme', 'katppy_theme_content_width', 0);
+
 
 /**
  * Register widget area.
@@ -193,6 +197,20 @@ function katppy_theme_scripts()
 	}
 }
 add_action('wp_enqueue_scripts', 'katppy_theme_scripts');
+
+
+/**
+ * Remove default WooCommerce CSS on the product detail page.
+ */
+function remove_woocommerce_styles()
+{
+	if (is_product()) {
+		wp_dequeue_style('woocommerce-general'); // Main WooCommerce CSS
+		wp_dequeue_style('woocommerce-layout'); // Layout-related styles
+		wp_dequeue_style('woocommerce-smallscreen'); // Small screen styles
+	}
+}
+add_action('wp_enqueue_scripts', 'remove_woocommerce_styles', 99);
 
 /**
  * Implement the Custom Header feature.
