@@ -32,7 +32,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
     @apply font-body;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     @apply font-heading;
 }
 
@@ -141,16 +143,31 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 
 
 /* ___________product detail page styles____________ */
-/* reset */
 .product-detail-page {
     @apply container mx-auto px-3;
 }
 
-.product-detail-page .woocommerce-breadcrumb {
-    @apply my-4 text-gray-300;
+/* 
+.product-detail-page .tabs.wc-tabs > ::before,
+.product-detail-page .tabs.wc-tabs > li > ::before,
+.product-detail-page .tabs.wc-tabs > li > ::after {
+    content: none;
+    display: none !important;
+} */
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs::after,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after {
+    content: none;
+    display: none !important;
 }
 
-.product-detail-page .summary.entry-summary{
+.product-detail-page .woocommerce-breadcrumb {
+    @apply my-4 text-small;
+}
+
+.product-detail-page .summary.entry-summary {
     @apply w-full;
 }
 
@@ -164,9 +181,70 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     @apply mb-5;
 }
 
-
-.product-detail-page ::before,
-.product-detail-page ::after {
-    content: none;
-    display: none !important;
+/* product summary styles */
+.product-detail-page .product-details-container .summary.entry-summary p {
+    @apply mb-3;
 }
+
+.product-detail-page .product-details-container .summary.entry-summary>h1.product_title {
+    @apply text-h4 text-balance;
+}
+
+.product-detail-page .product-details-container .summary.entry-summary .price {
+    @apply text-h6 text-black font-bold;
+}
+
+
+.product-detail-page .product-details-container .summary.entry-summary .variations .label,
+.product-detail-page .product-details-container .summary.entry-summary .variations .value {
+    text-align: left;
+    line-height: 3rem;
+}
+
+.product-detail-page .product-details-container .summary.entry-summary .variations .value>select {
+    @apply border border-black border-solid rounded-lg px-2;
+}
+
+.product-detail-page .product-details-container .summary.entry-summary .single_variation_wrap .woocommerce-variation-price {
+    @apply text-h4 text-black mb-3 font-bold;
+}
+
+
+.product-detail-page .product-details-container .summary.entry-summary .quantity input {
+    @apply leading-[3rem];
+    @apply border border-solid border-black rounded-lg;
+}
+
+.product-detail-page .product-details-container .summary.entry-summary .single_add_to_cart_button {
+    @apply p-0 ml-3;
+    @apply leading-[3rem] px-3 bg-gold-500 text-black;
+    @apply border-2 border-solid border-gold-500 rounded-lg;
+    @apply hover:bg-gold-300;
+}
+
+/* product add to cart notifications styles */
+.product-detail-page .woocommerce-notices-wrapper .woocommerce-message {
+    @apply bg-gold-100 text-black text-balance;
+    @apply border-t-gold-500;
+    @apply shadow-lg;
+}
+
+.product-detail-page .woocommerce-notices-wrapper .woocommerce-error {
+    @apply bg-gold-100 text-black text-balance;
+    @apply border-t-red-500;
+    @apply shadow-lg;
+}
+
+.product-detail-page .woocommerce-notices-wrapper .woocommerce-message::before {
+    @apply text-black;
+}
+
+
+.product-detail-page .woocommerce-notices-wrapper .woocommerce-message .button.wc-forward,
+.product-detail-page .woocommerce-notices-wrapper .woocommerce-error .button.wc-forward {
+    @apply p-0 mt-3;
+    @apply leading-[3rem] px-3 bg-gold-500 text-black;
+    @apply border-2 border-solid border-gold-500 rounded-lg;
+    @apply hover:bg-gold-300;
+}
+
