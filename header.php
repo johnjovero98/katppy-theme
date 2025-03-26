@@ -27,7 +27,7 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'katppy-theme'); ?></a>
 
-		<header id="masthead" class="site-header">
+		<header id="masthead" class="site-header shadow-lg">
 			<div class="container mx-auto p-3 flex justify-between items-center gap-3">
 				<!-- Navigation button -->
 				<button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">
@@ -37,7 +37,7 @@
 				</button>
 
 				<!-- Site Logo -->
-				<div class="site-branding max-w-[9rem]">
+				<div class="site-branding max-w-[9rem] lg:mr-6">
 					<?php
 					the_custom_logo();
 					if (is_front_page() && is_home()) :
