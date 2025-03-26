@@ -29,10 +29,66 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 
 /* ___________custom styles____________ */
+
+/* ___________global styles____________ */
 :root {
     font-size: 18px;
     line-height: 1.5;
 }
 
+body {
+    @apply min-w-[320px];
+}
 
 /* ___________Header styles____________ */
+/* mini-cart styles */
+header .wc-block-mini-cart__button {
+    @apply p-0;
+}
+
+header .wc-block-mini-cart__button .wc-block-mini-cart__icon {
+    @apply w-4 h-4;
+}
+
+header .wc-block-mini-cart__button .wc-block-mini-cart__badge {
+    @apply bg-gold-500 text-black;
+}
+
+
+/* menu  button */ 
+header .menu-toggle {
+    @apply block lg:hidden;
+}
+
+
+
+/* mobile navigation */
+header .overlay {
+    @apply transition-all duration-300 ease-in-out;
+    @apply hidden;
+}
+
+header .overlay.show-overlay {
+    @apply block;
+    @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10;
+    @apply cursor-pointer;
+    @apply lg:hidden;
+}
+
+
+header .main-navigation.is-mobile {
+    @apply bg-gold-500;
+    @apply fixed top-0 -right-full w-full h-[100dvh] max-w-[500px] z-20;
+    @apply transition-all duration-300 ease-in-out;
+}
+
+header .main-navigation.is-mobile.show-mobile-menu {
+    @apply right-0;
+}
+
+
+/* desktop navigation */
+header .main-navigation.is-desktop {
+    @apply bg-transparent;
+}
+

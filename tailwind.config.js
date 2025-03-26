@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./*.{php,html,js}",
-    "./template-parts/*.{php,html,js}",
-    "./woocommerce/**/*.php","./woocommerce/cart/**/*.php",
-    "./woocommerce/single-product/**/*.php",
-    "./woocommerce/checkout/**/*.php",
+    './**/*.php',
+    './template-parts/**/*.php',
+    './inc/**/*.php',
+    './assets/js/**/*.js',
+    './assets/css/**/*.css',
   ],
   theme: {  
     spacing:{
