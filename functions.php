@@ -106,7 +106,7 @@ function katppy_theme_setup()
 	add_theme_support('woocommerce');
 
 	// Add block support
-	add_theme_support( 'block-styles' );
+	add_theme_support('block-styles');
 }
 add_action('after_setup_theme', 'katppy_theme_setup');
 
@@ -212,14 +212,18 @@ function remove_woocommerce_styles()
 		wp_dequeue_style('woocommerce-layout'); // Layout-related styles
 		wp_dequeue_style('woocommerce-smallscreen'); // Small screen styles
 	}
+	
 }
 add_action('wp_enqueue_scripts', 'remove_woocommerce_styles', 99);
+
+
 
 /**
  * Remove Add to cart button on WooCommerce product card components.
  */
-function remove_add_to_cart_buttons() {
-    remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
+function remove_add_to_cart_buttons()
+{
+	remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 }
 add_action('init', 'remove_add_to_cart_buttons');
 
