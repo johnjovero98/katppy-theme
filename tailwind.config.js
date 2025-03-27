@@ -48,7 +48,7 @@ module.exports = {
           500:'#E9B44B',
         },
         'black':'#1D130D',
-        'white':'#FAF6F3',
+        'off-white':'#FAF6F3',
       },
 
       boxShadow: {

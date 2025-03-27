@@ -353,8 +353,6 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     @apply text-black;
 }
 
-
-
 /* related product styles */
 .product-detail-page .related.products ul.products::before,
 .product-detail-page .related.products ul.products::after {
@@ -362,7 +360,7 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 .product-detail-page .related.products ul.products {
-    @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3;
+    @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2;
 }
 
 .product-detail-page .related.products ul.products>li {
@@ -375,8 +373,52 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 .woocommerce span.onsale {
-    top: 0 !important;
-    left: 0 !important;
+    top: 0;
+    left: 0;
     width: fit-content;
     @apply leading-[3rem] px-3 py-0 bg-red-500 text-white rounded-r-full shadow-lg;
 }
+
+.woocommerce ul.products li.product .onsale {
+    top:13.5px;
+    left:5.5px;
+    @apply rounded-full;
+}
+
+/* product card styles... (applied in the shop page and product detail page) */
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    @apply font-body p-0;
+    @apply line-clamp-2;
+}
+
+.woocommerce ul.products li.product .price {
+    @apply text-h6 text-black font-bold m-0;
+}
+
+.woocommerce ul.products li.product .price del,
+.product-detail-page .product-details-container .summary.entry-summary .price del {
+    @apply text-gray-500 text-small;
+}
+
+.woocommerce ul.products li.product .price ins,
+.product-detail-page .product-details-container .summary.entry-summary .price ins {
+    @apply text-red-500;
+}
+
+.woocommerce ul.products li.product a.woocommerce-loop-product__link {
+    @apply flex flex-col p-2;
+
+    /* hover state */
+    @apply hover:rounded-lg hover:shadow-lg hover:bg-white;
+    @apply hover:border hover:border-solid hover:border-gold-100;
+    @apply transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110;
+}
+
+.woocommerce ul.products li.product a.woocommerce-loop-product__link img {
+    order: 0;
+}
+
+.woocommerce ul.products li.product a.woocommerce-loop-product__link .star-rating {
+    order: 1;
+}
+

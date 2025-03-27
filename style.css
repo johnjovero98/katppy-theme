@@ -586,6 +586,10 @@ video {
   margin-right: auto;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -1220,7 +1224,7 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 .product-detail-page .related.products ul.products {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1.5rem;
+  gap: .75rem;
 }
 
 @media (min-width: 768px) {
@@ -1247,8 +1251,8 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 .woocommerce span.onsale {
-  top: 0 !important;
-  left: 0 !important;
+  top: 0;
+  left: 0;
   width: -moz-fit-content;
   width: fit-content;
   border-top-right-radius: 9999px;
@@ -1261,10 +1265,93 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
   padding-bottom: 0px;
   line-height: 3rem;
   --tw-text-opacity: 1;
-  color: rgb(250 246 243 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.woocommerce ul.products li.product .onsale {
+  top:13.5px;
+  left:5.5px;
+  border-radius: 9999px;
+}
+
+/* product card styles... (applied in the shop page and product detail page) */
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  padding: 0px;
+  font-family: "Montserrat", san-serif;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.woocommerce ul.products li.product .price {
+  margin: 0px;
+  font-size: 1.25rem;
+  line-height: 3rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
+}
+
+.woocommerce ul.products li.product .price del,
+.product-detail-page .product-details-container .summary.entry-summary .price del {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
+.woocommerce ul.products li.product .price ins,
+.product-detail-page .product-details-container .summary.entry-summary .price ins {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
+.woocommerce ul.products li.product a.woocommerce-loop-product__link {
+  display: flex;
+  flex-direction: column;
+  padding: .75rem;
+  /* hover state */
+}
+
+.woocommerce ul.products li.product a.woocommerce-loop-product__link:hover {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(251 240 219 / var(--tw-border-opacity, 1));
+}
+
+.woocommerce ul.products li.product a.woocommerce-loop-product__link {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.woocommerce ul.products li.product a.woocommerce-loop-product__link:hover {
+  --tw-translate-y: -.375rem;
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.woocommerce ul.products li.product a.woocommerce-loop-product__link img {
+  order: 0;
+}
+
+.woocommerce ul.products li.product a.woocommerce-loop-product__link .star-rating {
+  order: 1;
 }
 
 @media (min-width: 1024px) {
@@ -1276,3 +1363,4 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     display: none;
   }
 }
+
