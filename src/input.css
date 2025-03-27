@@ -147,14 +147,6 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     @apply container mx-auto px-3;
 }
 
-/* 
-.product-detail-page .tabs.wc-tabs > ::before,
-.product-detail-page .tabs.wc-tabs > li > ::before,
-.product-detail-page .tabs.wc-tabs > li > ::after {
-    content: none;
-    display: none !important;
-} */
-
 .woocommerce div.product .woocommerce-tabs ul.tabs::before,
 .woocommerce div.product .woocommerce-tabs ul.tabs::after,
 .woocommerce div.product .woocommerce-tabs ul.tabs li::before,
@@ -216,7 +208,7 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 .product-detail-page .product-details-container .summary.entry-summary .single_add_to_cart_button {
-    @apply p-0 ml-3;
+    @apply p-0;
     @apply leading-[3rem] px-3 bg-gold-500 text-black;
     @apply border-2 border-solid border-gold-500 rounded-lg;
     @apply hover:bg-gold-300;
@@ -295,4 +287,30 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     @apply m-[-2px];
     position: relative;
     z-index: 3;
+}
+
+/* related product styles */
+.product-detail-page .related.products ul.products::before, 
+.product-detail-page .related.products ul.products::after {
+    @apply hidden;
+}
+
+.product-detail-page .related.products ul.products {
+    @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3;
+}
+
+.product-detail-page .related.products ul.products > li {
+    @apply relative;
+}
+
+
+.product-detail-page .related.products > h2 {
+    @apply text-h4 text-balance mb-3;
+}
+
+.product-detail-page span.onsale {
+    top: 0 !important;
+    left: 0 !important;
+    width: fit-content;
+    @apply leading-[3rem] px-3 py-0 bg-red-500 text-white rounded-r-full shadow-lg;
 }
