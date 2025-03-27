@@ -242,7 +242,7 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 
 
 /* tab section styles */
-.product-detail-page .woocommerce-tabs.wc-tabs-wrapper  {
+.product-detail-page .woocommerce-tabs.wc-tabs-wrapper {
     @apply mb-5;
 }
 
@@ -289,8 +289,74 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     z-index: 3;
 }
 
+.product-detail-page div.product .woocommerce-tabs .panel h2 {
+    @apply text-h5 text-balance mb-3;
+}
+
+/* description panel styles */
+.product-detail-page .panel.woocommerce-Tabs-panel--description>* {
+    @apply text-balance mb-3;
+}
+
+/* reviews panel styles */
+.product-detail-page .panel.woocommerce-Tabs-panel--reviews label {
+    @apply block;
+}
+
+.product-detail-page .panel.woocommerce-Tabs-panel--reviews .comment-form-cookies-consent label {
+    @apply inline-block;
+}
+
+.product-detail-page .panel.woocommerce-Tabs-panel--reviews textarea {
+    @apply border border-solid border-black rounded-lg;
+    @apply w-full;
+    @apply p-2;
+    @apply min-h-[10.5rem] max-w-[750px];
+}
+
+.product-detail-page .panel.woocommerce-Tabs-panel--reviews .comment-form-author input,
+.product-detail-page .panel.woocommerce-Tabs-panel--reviews .comment-form-email input {
+    @apply border border-solid border-black rounded-lg;
+    @apply w-full;
+    @apply p-2;
+    @apply max-w-[750px];
+}
+
+.product-detail-page .panel.woocommerce-Tabs-panel--reviews #comments {
+    @apply mb-4;
+}
+
+.product-detail-page .panel.woocommerce-Tabs-panel--reviews .comment-reply-title {
+    @apply text-h5 text-balance mb-3;
+    @apply font-heading block;
+}
+
+/* submit button */
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit {
+    @apply p-0;
+    @apply leading-[3rem] px-3 bg-gold-500 text-black;
+    @apply border-2 border-solid border-gold-500 rounded-lg;
+    @apply hover:bg-gold-300;
+}
+
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+    @apply hidden;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+    @apply bg-gold-100 p-3 rounded-lg shadow-lg;
+    @apply border border-solid border-black;
+    @apply ml-0;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text .meta .woocommerce-review__author {
+    @apply text-black;
+}
+
+
+
 /* related product styles */
-.product-detail-page .related.products ul.products::before, 
+.product-detail-page .related.products ul.products::before,
 .product-detail-page .related.products ul.products::after {
     @apply hidden;
 }
@@ -299,16 +365,16 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3;
 }
 
-.product-detail-page .related.products ul.products > li {
+.product-detail-page .related.products ul.products>li {
     @apply relative;
 }
 
 
-.product-detail-page .related.products > h2 {
+.product-detail-page .related.products>h2 {
     @apply text-h4 text-balance mb-3;
 }
 
-.product-detail-page span.onsale {
+.woocommerce span.onsale {
     top: 0 !important;
     left: 0 !important;
     width: fit-content;
