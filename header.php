@@ -43,7 +43,7 @@
 				</button>
 
 				<!-- Site Logo -->
-				<div class="site-branding max-w-[9rem] lg:mr-6">
+				<div class="site-branding max-w-[9rem] lg:mr-[3rem] xl:mr-[6rem]">
 					<?php
 					the_custom_logo();
 					if (is_front_page() && is_home()) :

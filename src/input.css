@@ -62,6 +62,27 @@ header .menu-toggle {
     @apply block lg:hidden;
 }
 
+/* nav links  */
+header nav a {
+    @apply leading-[3rem];
+}
+
+header nav.main-navigation.is-mobile a,
+header nav.main-navigation.is-desktop #primary-menu>.menu-item>a {
+    @apply hover:underline;
+}
+
+header nav.main-navigation.is-desktop .sub-menu {
+    @apply shadow-lg;
+}
+
+header nav.main-navigation.is-desktop .sub-menu>.menu-item > a {
+    @apply hover:bg-black hover:text-white rounded-lg;
+    @apply px-2 leading-[3rem] block;
+    @apply transition ease-in-out hover:translate-x-2 hover:scale-110 duration-300;
+}
+
+
 
 
 /* mobile navigation */
@@ -101,7 +122,7 @@ header .main-navigation.is-mobile .currency-switch-container {
     order: 1;
 }
 
-header .main-navigation.is-mobile li.menu-item  {
+header .main-navigation.is-mobile li.menu-item {
     @apply leading-[3rem];
 }
 
@@ -130,7 +151,7 @@ header .main-navigation.is-mobile ul.show-sub-menu {
     @apply block max-h-[500px]
 }
 
-header .main-navigation.is-mobile ul.show-sub-menu + svg {
+header .main-navigation.is-mobile ul.show-sub-menu+svg {
     @apply rotate-180
 }
 
@@ -175,9 +196,9 @@ header .main-navigation.is-desktop .menu-navigation-links-container>#primary-men
 
 header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item .sub-menu {
     @apply absolute whitespace-nowrap bg-gold-100 rounded-lg shadow-lg top-full;
+    @apply border-[5px] border-gold-500 border-solid;
     @apply z-10;
-    @apply max-h-0 overflow-hidden;
-    @apply transition-all duration-300 ease-in-out;
+    @apply hidden;
 }
 
 header .main-navigation.is-desktop .menu-item-has-children {
@@ -196,7 +217,7 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .down-chevron {
 }
 
 header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
-    max-height: 500px !important;
+    display: block!important;
 }
 
 
