@@ -1282,8 +1282,8 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 .woocommerce ul.products li.product .onsale {
-  top:13.5px;
-  left:5.5px;
+  top: 13.5px;
+  left: 5.5px;
   border-radius: 9999px;
 }
 
@@ -1364,7 +1364,116 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
   order: 1;
 }
 
-/* product card styles... (blockified) */
+/* ___________Cart page styles____________ */
+
+.cart-page h1,
+.checkout-page h1 {
+  margin-bottom: 3rem;
+  font-size: 2.441rem;
+  line-height: 3rem;
+}
+
+/* product upsells card */
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product {
+  text-align: left;
+}
+
+.cart-page .wp-block-button.wc-block-components-product-button {
+  display: none !important;
+}
+
+.cart-page .wc-block-components-product-sale-badge {
+  border-width: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-image {
+  order: 0;
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-rating {
+  order: 1;
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-price {
+  overflow: auto;
+  font-size: 1.25rem;
+  line-height: 3rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-price ins {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-price del {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-title {
+  margin-bottom: 0px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: "Montserrat", san-serif;
+}
+
+.cart-page .wp-block-button__link {
+  padding: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+}
+
+.cart-page .wp-block-button__link:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 210 147 / var(--tw-bg-opacity, 1));
+}
+
+.cart-page .wc-block-cart .wc-block-cart__submit-container {
+  background-color: #E9B44B !important;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+}
+
+.cart-page .wc-block-cart .wc-block-cart__submit-container:hover {
+  background-color:  #f2d293 !important;
+}
+
+.cart-page .wc-block-components-quantity-selector .wc-block-components-quantity-selector__button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
+}
 
 @media (min-width: 1024px) {
   .lg\:mr-6 {
@@ -1375,4 +1484,3 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     display: none;
   }
 }
-

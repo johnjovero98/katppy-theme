@@ -380,8 +380,8 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 .woocommerce ul.products li.product .onsale {
-    top:13.5px;
-    left:5.5px;
+    top: 13.5px;
+    left: 5.5px;
     @apply rounded-full;
 }
 
@@ -422,5 +422,72 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     order: 1;
 }
 
-/* product card styles... (blockified) */
+/* ___________Cart page styles____________ */
+.cart-page h1,
+.checkout-page h1 {
+    @apply text-h3 mb-4;
+}
 
+/* product upsells card */
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product {
+    @apply text-left
+}
+
+.cart-page .wp-block-button.wc-block-components-product-button {
+    display: none !important;
+}
+
+.cart-page .wc-block-components-product-sale-badge {
+    @apply bg-red-500 text-white border-0;
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div {
+    @apply flex flex-col
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-image {
+    order: 0;
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-rating {
+    order: 1;
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-price {
+    @apply text-h6 text-black font-bold overflow-auto;
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-price ins {
+    @apply text-red-500;
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-price del {
+    @apply text-gray-500 text-small;
+}
+
+.cart-page .wp-block-woocommerce-cart .wp-block-woocommerce-cart-cross-sells-block .cross-sells-product div .wp-block-cart-cross-sells-product__product-title {
+    @apply font-body line-clamp-2 mb-0;
+}
+
+.cart-page .wp-block-button__link {
+    @apply p-0;
+    @apply leading-[3rem] px-3 bg-gold-500 text-black font-bold;
+    @apply border-2 border-solid border-gold-500 rounded-lg;
+    @apply hover:bg-gold-300;
+}
+
+
+.cart-page .wc-block-cart .wc-block-cart__submit-container {
+    background-color: #E9B44B !important;
+    @apply font-bold;
+    @apply border-2 border-solid border-gold-500 rounded-lg;
+}
+
+.cart-page .wc-block-cart .wc-block-cart__submit-container:hover {
+    background-color:  #f2d293 !important;
+}
+
+
+.cart-page .wc-block-components-quantity-selector .wc-block-components-quantity-selector__button {
+    @apply bg-gold-500
+}
