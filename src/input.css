@@ -76,7 +76,7 @@ header nav.main-navigation.is-desktop .sub-menu {
     @apply shadow-lg;
 }
 
-header nav.main-navigation.is-desktop .sub-menu>.menu-item > a {
+header nav.main-navigation.is-desktop .sub-menu>.menu-item>a {
     @apply hover:bg-black hover:text-white rounded-lg;
     @apply px-2 leading-[3rem] block;
     @apply transition ease-in-out hover:translate-x-2 hover:scale-110 duration-300;
@@ -170,6 +170,8 @@ header .currency-switch-container {
 }
 
 
+
+
 /* desktop navigation */
 header .main-navigation.is-desktop {
     @apply bg-transparent;
@@ -218,8 +220,163 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .down-chevron {
 }
 
 header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
-    display: block!important;
+    display: block !important;
 }
+
+/* ___________Home page styles____________ */
+.home-page .hero-banner {
+    @apply grid;
+    @apply grid-cols-1;
+    @apply grid-rows-1;
+
+    @apply lg:grid-cols-12;
+    @apply lg:grid-rows-1
+}
+
+
+.home-page .hero-img {
+    @apply h-[540px];
+    @apply col-span-full row-span-full;
+    @apply lg:col-start-7 lg:col-end-13 lg:row-span-full;
+}
+
+.home-page .hero-cta {
+    @apply bg-[url(https://katppy.com/wp-content/themes/katppy-theme/images/hero-bg-paper-mobile.png)];
+    @apply lg:bg-[url(https://katppy.com/wp-content/themes/katppy-theme/images/hero-bg-paper-desktop.png)];
+    @apply lg:bg-cover;
+
+
+    @apply p-3 pb-4 pt-[15rem] lg:p-5;
+    @apply flex items-center;
+    @apply col-span-full row-span-full;
+    @apply lg:top-0;
+    @apply lg:bg-no-repeat;
+    @apply lg:col-span-full lg:row-span-full;
+}
+
+.home-page .hero-heading {
+    @apply text-balance mb-3 font-heading text-h3 lg:text-h1 max-w-[40rem] text-white;
+    text-shadow: 1px 1px 5px rgba(29, 19, 13, .5)
+}
+
+.home-page .paw-sticker {
+    @apply absolute w-full;
+    @apply max-w-[110px] bottom-[-60px] left-1/2 -translate-x-1/2;
+    @apply lg:max-w-[150px] lg:bottom-[40px] lg:translate-x-[30%];
+}
+
+.home-page .hero-banner .cta-btn {
+    @apply p-0 shadow-lg text-h6 text-center block md:inline-block;
+    @apply px-4 bg-black text-white font-bold;
+    @apply border-[5px] border-solid border-white rounded-lg;
+    @apply hover:bg-gold-300;
+}
+
+/* product carousel slider */
+.home-page .entry-header {
+    @apply invisible h-0;
+}
+
+.home-page .wc-product-slider {
+    @apply pb-5
+}
+
+.home-page .wc-product-slider .add_to_cart_button {
+    @apply p-0;
+    @apply leading-[3rem] px-3 bg-gold-500 text-black;
+    @apply border-2 border-solid border-gold-500 rounded-lg;
+    @apply hover:bg-gold-300;
+}
+
+.home-page .swiper-button-next,
+.home-page .swiper-button-prev {
+    @apply size-4 p-2 text-black bg-gold-300 shadow-lg rounded-full;
+}
+
+.home-page .swiper-button-next:after,
+.home-page .swiper-button-prev:after {
+    @apply text-p;
+
+}
+
+.home-page .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-gold-300
+}
+
+
+/* home page product categories section styles */
+.home-page .product-categories-grid {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center;
+}
+
+.home-page .product-categories-grid a {
+    @apply inline-block mb-[9px];
+    @apply border-gold-500 border-[9px] border-solid rounded-full hover:border-0;
+    @apply shadow-lg;
+    @apply transition ease-in-out hover:-translate-y-1 hover:scale-125 duration-300;
+}
+
+.home-page .product-categories-grid img {
+    @apply aspect-square object-cover rounded-full;
+}
+
+.home-page .product-categories-grid h3 {
+    @apply text-p font-body font-bold;
+    @apply md:text-h6 md:leading-[1.5rem];
+}
+
+
+/* home page product events section styles */
+/* farmers market section */
+.home-page .farmers-market {
+    @apply grid;
+
+    /* mobile layout */
+    grid-template-rows: repeat(8, minmax(0, auto));
+    @apply grid-cols-1;
+    @apply lg:grid-cols-8
+}
+
+.home-page .cat-img-container {
+    @apply row-start-1 row-end-5 col-span-full z-10;
+    @apply lg:col-start-1 lg:col-end-5;
+    @apply 2xl:row-start-3;
+}
+
+.home-page .cat-img-container img {
+    @apply relative left-1/2 -translate-x-1/2;
+}
+
+.home-page .farmers-market-cta {
+    @apply bg-gold-100 border-[13.5px] border-gold-500 px-3 pt-5 pb-7 rounded-[110px];
+    @apply row-start-4 row-end-8 col-span-full;
+    @apply md:pb-5 lg:px-[110px];
+    @apply lg:col-start-1 lg:col-end-7;
+}
+
+.home-page .farmers-market-cta .cta-btn {
+    @apply p-0 shadow-lg text-h6 text-center block md:inline-block;
+    @apply px-4 bg-black text-white font-bold;
+    @apply border-[5px] border-solid border-white rounded-lg;
+    @apply hover:bg-gold-300;
+}
+
+
+.home-page .farmers-market-img-container {
+    @apply w-full;
+    @apply row-start-7 row-end-9 col-span-full;
+    @apply md:row-start-6;
+    @apply lg:row-start-3 lg:row-end-7 lg:col-start-6 lg:-col-end-1;
+    @apply 2xl:col-start-5 2xl:-col-end-1;
+}
+
+.home-page .farmers-market-img-container img {
+    @apply w-full max-w-[350px] relative float-right;
+    @apply lg:max-w-full;
+    @apply xl:float-left;
+}
+
+
 
 
 /* ___________product detail page styles____________ */
@@ -256,6 +413,7 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 /* product summary styles */
 .product-detail-page .product-details-container .summary.entry-summary p {
     @apply mb-3;
+
 }
 
 .product-detail-page .product-details-container .summary.entry-summary>h1.product_title {
