@@ -1179,7 +1179,8 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
   }
 }
 
-.home-page .hero-banner .cta-btn {
+.home-page .hero-banner .cta-btn,
+.home-page .farmers-market-cta .cta-btn {
   display: block;
   padding: 0px;
   text-align: center;
@@ -1191,12 +1192,14 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 @media (min-width: 768px) {
-  .home-page .hero-banner .cta-btn {
+  .home-page .hero-banner .cta-btn,
+.home-page .farmers-market-cta .cta-btn {
     display: inline-block;
   }
 }
 
-.home-page .hero-banner .cta-btn {
+.home-page .hero-banner .cta-btn,
+.home-page .farmers-market-cta .cta-btn {
   --tw-bg-opacity: 1;
   background-color: rgb(29 19 13 / var(--tw-bg-opacity, 1));
   padding-left: 3rem;
@@ -1205,15 +1208,18 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   border-radius: 0.5rem;
-  border-width: 5px;
+  border-width: 2px;
   border-style: solid;
   --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+  border-color: rgb(29 19 13 / var(--tw-border-opacity, 1));
 }
 
-.home-page .hero-banner .cta-btn:hover {
+.home-page .hero-banner .cta-btn:hover,
+.home-page .farmers-market-cta .cta-btn:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(242 210 147 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
 }
 
 /* product carousel slider */
@@ -1421,43 +1427,6 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     grid-column-start: 1;
     grid-column-end: 7;
   }
-}
-
-.home-page .farmers-market-cta .cta-btn {
-  display: block;
-  padding: 0px;
-  text-align: center;
-  font-size: 1.25rem;
-  line-height: 3rem;
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-@media (min-width: 768px) {
-  .home-page .farmers-market-cta .cta-btn {
-    display: inline-block;
-  }
-}
-
-.home-page .farmers-market-cta .cta-btn {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 19 13 / var(--tw-bg-opacity, 1));
-  padding-left: 3rem;
-  padding-right: 3rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-  border-radius: 0.5rem;
-  border-width: 5px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.home-page .farmers-market-cta .cta-btn:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 210 147 / var(--tw-bg-opacity, 1));
 }
 
 .home-page .farmers-market-img-container {

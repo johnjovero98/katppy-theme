@@ -265,11 +265,12 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     @apply lg:max-w-[150px] lg:bottom-[40px] lg:translate-x-[30%];
 }
 
-.home-page .hero-banner .cta-btn {
+.home-page .hero-banner .cta-btn,
+.home-page .farmers-market-cta .cta-btn {
     @apply p-0 shadow-lg text-h6 text-center block md:inline-block;
     @apply px-4 bg-black text-white font-bold;
-    @apply border-[5px] border-solid border-white rounded-lg;
-    @apply hover:bg-gold-300;
+    @apply border-2 border-solid border-black rounded-lg;
+    @apply hover:bg-gold-300 hover:text-black;
 }
 
 /* product carousel slider */
@@ -353,14 +354,6 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     @apply md:pb-5 lg:px-[110px];
     @apply lg:col-start-1 lg:col-end-7;
 }
-
-.home-page .farmers-market-cta .cta-btn {
-    @apply p-0 shadow-lg text-h6 text-center block md:inline-block;
-    @apply px-4 bg-black text-white font-bold;
-    @apply border-[5px] border-solid border-white rounded-lg;
-    @apply hover:bg-gold-300;
-}
-
 
 .home-page .farmers-market-img-container {
     @apply w-full;
