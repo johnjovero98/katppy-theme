@@ -148,7 +148,8 @@ header .main-navigation.is-mobile ul.sub-menu {
 }
 
 header .main-navigation.is-mobile ul.show-sub-menu {
-    @apply block max-h-[500px]
+    @apply block max-h-[500px];
+    @apply border-[5px] border-gold-300 border-solid;
 }
 
 header .main-navigation.is-mobile ul.show-sub-menu+svg {

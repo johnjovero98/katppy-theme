@@ -873,6 +873,10 @@ header .main-navigation.is-mobile ul.sub-menu {
 header .main-navigation.is-mobile ul.show-sub-menu {
   display: block;
   max-height: 500px;
+  border-width: 5px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(242 210 147 / var(--tw-border-opacity, 1));
 }
 
 header .main-navigation.is-mobile ul.show-sub-menu+svg {
