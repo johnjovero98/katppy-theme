@@ -750,6 +750,7 @@ header .overlay.show-overlay {
 header .main-navigation.is-mobile {
   --tw-bg-opacity: 1;
   background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
+  padding: 1.5rem;
   position: fixed;
   top: 0px;
   right: -100%;
@@ -761,10 +762,90 @@ header .main-navigation.is-mobile {
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 header .main-navigation.is-mobile.show-mobile-menu {
   right: 0px;
+}
+
+header .main-navigation.is-mobile #close-button {
+  order: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .main-navigation.is-mobile .currency-switch-container {
+  order: 1;
+}
+
+header .main-navigation.is-mobile li.menu-item {
+  line-height: 3rem;
+}
+
+header .main-navigation.is-mobile li.menu-item-has-children {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .main-navigation.is-mobile li.menu-item-has-children svg {
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 210 147 / var(--tw-bg-opacity, 1));
+  padding: 3px;
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header .main-navigation.is-mobile ul.sub-menu {
+  width: 100%;
+  order: 1;
+  max-height: 0px;
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+  padding-left: .75rem;
+  padding-right: .75rem;
+  --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+header .main-navigation.is-mobile ul.show-sub-menu {
+  display: block;
+  max-height: 500px;
+}
+
+header .main-navigation.is-mobile ul.show-sub-menu + svg {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+/* currency switcher styles */
+
+header .wmc-sub-currency {
+  right: 0px;
+}
+
+header .wmc-currency-wrapper {
+  white-space: nowrap;
+}
+
+header .currency-switch-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* desktop navigation */
@@ -1111,7 +1192,6 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  margin: -2px;
   position: relative;
   z-index: 3;
 }
@@ -1467,7 +1547,7 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 .cart-page .wc-block-cart .wc-block-cart__submit-container:hover {
-  background-color:  #f2d293 !important;
+  background-color: #f2d293 !important;
 }
 
 .cart-page .wc-block-components-quantity-selector .wc-block-components-quantity-selector__button {

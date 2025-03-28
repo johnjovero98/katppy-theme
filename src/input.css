@@ -79,14 +79,72 @@ header .overlay.show-overlay {
 
 
 header .main-navigation.is-mobile {
-    @apply bg-gold-500;
+    @apply bg-gold-500 p-3;
     @apply fixed top-0 -right-full w-full h-[100dvh] max-w-[500px] z-20;
     @apply transition-all duration-300 ease-in-out;
     @apply overflow-y-scroll;
+
+    /* layout */
+    @apply flex flex-col gap-3;
 }
 
 header .main-navigation.is-mobile.show-mobile-menu {
     @apply right-0;
+}
+
+header .main-navigation.is-mobile #close-button {
+    order: 0;
+    @apply flex justify-end;
+}
+
+header .main-navigation.is-mobile .currency-switch-container {
+    order: 1;
+}
+
+header .main-navigation.is-mobile li.menu-item  {
+    @apply leading-[3rem];
+}
+
+header .main-navigation.is-mobile li.menu-item-has-children {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .main-navigation.is-mobile li.menu-item-has-children svg {
+    @apply p-[3px] rounded-full bg-gold-300;
+    @apply rotate-0;
+    @apply transition-all duration-300 ease-in-out;
+}
+
+header .main-navigation.is-mobile ul.sub-menu {
+    width: 100%;
+    order: 1;
+    @apply max-h-0 overflow-hidden;
+    @apply transition-all duration-300 ease-in-out;
+    @apply px-2 bg-gold-100 rounded-lg shadow-inner;
+}
+
+header .main-navigation.is-mobile ul.show-sub-menu {
+    @apply block max-h-[500px]
+}
+
+header .main-navigation.is-mobile ul.show-sub-menu + svg {
+    @apply rotate-180
+}
+
+/* currency switcher styles */
+header .wmc-sub-currency {
+    @apply right-0;
+}
+
+header .wmc-currency-wrapper {
+    @apply whitespace-nowrap;
+}
+
+header .currency-switch-container {
+    @apply flex justify-end
 }
 
 
@@ -284,7 +342,6 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 .product-detail-page div.product .woocommerce-tabs .panel {
     @apply border-2 border-solid border-gold-500;
     @apply p-3 rounded-lg shadow-lg;
-    @apply m-[-2px];
     position: relative;
     z-index: 3;
 }
@@ -484,7 +541,7 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 .cart-page .wc-block-cart .wc-block-cart__submit-container:hover {
-    background-color:  #f2d293 !important;
+    background-color: #f2d293 !important;
 }
 
 
