@@ -135,7 +135,7 @@ get_header();
 
 		<!-- customer testimonials widget -->
 		<div class="customer-testimonial mt-5">
-			<?php dynamic_sidebar('customer-testimonial'); ?>
+			<?php dynamic_sidebar('customer-testimonials'); ?>
 		</div>
 
 	</section>

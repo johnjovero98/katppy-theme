@@ -782,6 +782,10 @@ h3 {
   font-family: "Chewy", serif;
 }
 
+p {
+  font-family: "Montserrat", san-serif;
+}
+
 body {
   min-width: 320px;
 }
@@ -1475,6 +1479,17 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
   .home-page .farmers-market-img-container img {
     float: left;
   }
+}
+
+.home-page .wrc-review-content {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.home-page .wrc-swiper {
+  padding-bottom: 3rem;
 }
 
 /* ___________product detail page styles____________ */

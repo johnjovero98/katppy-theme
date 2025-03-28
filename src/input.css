@@ -38,6 +38,10 @@ h3 {
     @apply font-heading;
 }
 
+p {
+    @apply font-body;
+}
+
 body {
     @apply min-w-[320px];
 }
@@ -370,7 +374,13 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 }
 
 
+.home-page .wrc-review-content {
+    @apply line-clamp-4;
+}
 
+.home-page .wrc-swiper {
+    @apply pb-4
+}
 
 /* ___________product detail page styles____________ */
 .product-detail-page {
