@@ -143,6 +143,21 @@ function katppy_theme_widgets_init()
 		)
 	);
 
+
+
+	// Header: Register Announcement Bar Widget Area
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Header: Announcement Bar', 'katppy-theme'),
+			'id'            => 'announcement',
+			'description'   => esc_html__('Add a announcement here.', 'katppy-theme'),
+			'before_widget' => '<div id="%1$s" class="announcement-bar-container widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
 	// Header: Register Search Bar Widget Area
 	register_sidebar(
 		array(

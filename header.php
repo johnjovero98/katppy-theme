@@ -33,6 +33,10 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'katppy-theme'); ?></a>
 
+		<div class="announcement text-p bg-gold-500 p-[4.5px]">
+			<?php dynamic_sidebar('announcement'); ?>
+		</div>
+
 		<header id="masthead" class="site-header shadow-lg">
 			<div class="container mx-auto p-3 flex justify-between items-center gap-3">
 				<!-- Navigation button -->
