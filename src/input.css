@@ -72,7 +72,9 @@ header nav a {
 }
 
 header nav.main-navigation.is-mobile a,
-header nav.main-navigation.is-desktop #primary-menu>.menu-item>a {
+header nav.main-navigation.is-desktop #primary-menu>.menu-item>a,
+footer .product-links a,
+footer .site-links a {
     @apply hover:underline;
 }
 

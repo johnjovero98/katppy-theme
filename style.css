@@ -897,7 +897,9 @@ header nav a {
 }
 
 header nav.main-navigation.is-mobile a:hover,
-header nav.main-navigation.is-desktop #primary-menu>.menu-item>a:hover {
+header nav.main-navigation.is-desktop #primary-menu>.menu-item>a:hover,
+footer .product-links a:hover,
+footer .site-links a:hover {
   text-decoration-line: underline;
 }
 
