@@ -227,6 +227,59 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     display: block !important;
 }
 
+/* ___________Footer styles____________ */
+footer h3 {
+    @apply text-h5 font-bold;
+}
+
+footer .wp-block-social-links .wp-block-social-link.wp-social-link {
+    @apply bg-black
+}
+
+/* news letter widget styles */
+
+.newsletter-img {
+    position: absolute;
+    top: -91px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.newsletter-form {
+    @apply flex flex-col items-center gap-2 justify-center lg:flex-row lg:items-end lg:gap-0;
+    @apply w-full max-w-[700px]
+}
+
+.tnp-subscription>form {
+    @apply flex flex-col items-center gap-3;
+}
+
+.tnp-field-email,
+.tnp-field-button {
+    @apply w-full;
+}
+
+.tnp-field-email {
+    @apply lg:w-[70%]
+}
+
+.tnp-field-button {
+    @apply lg:w-[30%]
+}
+
+input.tnp-email {
+    @apply w-full h-[3rem] p-2;
+    @apply rounded-lg lg:rounded-none lg:rounded-l-lg;
+}
+
+input.tnp-submit {
+    @apply w-full h-[3rem] text-h6 font-bold p-0 leading-[3rem] bg-gold-500 text-black border-0;
+    @apply rounded-lg lg:rounded-none lg:rounded-r-lg;
+    @apply cursor-pointer
+}
+
+
+
 /* ___________Home page styles____________ */
 .home-page .hero-banner {
     @apply grid;
@@ -272,7 +325,7 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 .home-page .hero-banner .cta-btn,
 .home-page .farmers-market-cta .cta-btn {
     @apply p-0 shadow-lg text-h6 text-center block md:inline-block;
-    @apply px-4 bg-black text-white font-bold;
+    @apply px-3 bg-black text-white font-bold;
     @apply border-2 border-solid border-black rounded-lg;
     @apply hover:bg-gold-300 hover:text-black;
 }

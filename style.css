@@ -581,6 +581,10 @@ video {
   visibility: visible;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -607,8 +611,16 @@ video {
   margin-bottom: 3rem;
 }
 
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
 .mt-5 {
   margin-top: 4.5rem;
+}
+
+.mt-\[162px\] {
+  margin-top: 162px;
 }
 
 .block {
@@ -617,6 +629,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .size-4 {
@@ -628,12 +644,24 @@ video {
   height: 100%;
 }
 
+.w-\[50px\] {
+  width: 50px;
+}
+
 .w-full {
   width: 100%;
 }
 
+.max-w-\[168px\] {
+  max-width: 168px;
+}
+
 .max-w-\[25ch\] {
   max-width: 25ch;
+}
+
+.max-w-\[281px\] {
+  max-width: 281px;
 }
 
 .max-w-\[40ch\] {
@@ -646,6 +674,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -668,13 +700,31 @@ video {
   gap: 3rem;
 }
 
+.gap-5 {
+  gap: 4.5rem;
+}
+
+.gap-\[7px\] {
+  gap: 7px;
+}
+
 .text-balance {
   text-wrap: balance;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 19 13 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gold-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gold-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
 }
 
 .object-cover {
@@ -684,6 +734,10 @@ video {
 
 .p-3 {
   padding: 1.5rem;
+}
+
+.p-\[4\.5px\] {
+  padding: 4.5px;
 }
 
 .px-3 {
@@ -710,6 +764,11 @@ video {
   line-height: 4.5rem;
 }
 
+.text-h3 {
+  font-size: 2.441rem;
+  line-height: 3rem;
+}
+
 .text-h4 {
   font-size: 1.953rem ;
   line-height: 3rem;
@@ -720,12 +779,21 @@ video {
   line-height: 1.5rem;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .font-medium {
   font-weight: 500;
 }
 
 .leading-\[1\.5rem\] {
   line-height: 1.5rem;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .shadow-lg {
@@ -1074,6 +1142,113 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
   display: block !important;
 }
 
+/* ___________Footer styles____________ */
+
+footer h3 {
+  font-size: 1.563rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+footer .wp-block-social-links .wp-block-social-link.wp-social-link {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 19 13 / var(--tw-bg-opacity, 1));
+}
+
+/* news letter widget styles */
+
+.newsletter-img {
+  position: absolute;
+  top: -91px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+}
+
+@media (min-width: 1024px) {
+  .newsletter-form {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0px;
+  }
+}
+
+.newsletter-form {
+  width: 100%;
+  max-width: 700px;
+}
+
+.tnp-subscription>form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.tnp-field-email,
+.tnp-field-button {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .tnp-field-email {
+    width: 70%;
+  }
+
+  .tnp-field-button {
+    width: 30%;
+  }
+}
+
+input.tnp-email {
+  height: 3rem;
+  width: 100%;
+  padding: .75rem;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  input.tnp-email {
+    border-radius: 0px;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+}
+
+input.tnp-submit {
+  height: 3rem;
+  width: 100%;
+  border-width: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
+  padding: 0px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 3rem;
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  input.tnp-submit {
+    border-radius: 0px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
+
+input.tnp-submit {
+  cursor: pointer;
+}
+
 /* ___________Home page styles____________ */
 
 .home-page .hero-banner {
@@ -1206,8 +1381,8 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
 .home-page .farmers-market-cta .cta-btn {
   --tw-bg-opacity: 1;
   background-color: rgb(29 19 13 / var(--tw-bg-opacity, 1));
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -2151,9 +2326,26 @@ header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
     display: none;
   }
 
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+  .lg\:gap-7 {
+    gap: 7.5rem;
+  }
+
   .lg\:py-4 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .lg\:text-h2 {
+    font-size: 3.052rem;
+    line-height: 4.5rem;
   }
 
   .lg\:text-h3 {

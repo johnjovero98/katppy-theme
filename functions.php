@@ -195,6 +195,48 @@ function katppy_theme_widgets_init()
 			'after_title'   => '</h2>',
 		)
 	);
+
+
+
+
+	// Footer: Product links
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer: Product Links', 'katppy'),
+			'id'            => 'product-links',
+			'description'   => esc_html__('Add Product Links here.', 'katppy'),
+			'before_widget' => '<div id="%1$s" class="product-links widget %2$s product-links">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	// Footer: Site Links
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer: Site Links', 'katppy'),
+			'id'            => 'site-links',
+			'description'   => esc_html__('Add site links here.', 'katppy'),
+			'before_widget' => '<div id="%1$s" class="site-links widget %2$s site-links">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	// Footer: Social Media links
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer: Social Media Links', 'katppy'),
+			'id'            => 'social-media-links',
+			'description'   => esc_html__('Add Social Media links here.', 'katppy'),
+			'before_widget' => '<div id="%1$s" class="social-media-links widget %2$s social-media-links">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action('widgets_init', 'katppy_theme_widgets_init');
 
