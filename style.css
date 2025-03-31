@@ -589,6 +589,10 @@ video {
   position: relative;
 }
 
+.top-\[135px\] {
+  top: 135px;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -638,6 +642,11 @@ video {
 .size-4 {
   width: 3rem;
   height: 3rem;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-full {
@@ -708,8 +717,25 @@ video {
   gap: 7px;
 }
 
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
 .text-balance {
   text-wrap: balance;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-gray-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity, 1));
 }
 
 .bg-black {
@@ -743,6 +769,11 @@ video {
 .px-3 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-4 {
@@ -787,6 +818,10 @@ video {
   font-weight: 500;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .leading-\[1\.5rem\] {
   line-height: 1.5rem;
 }
@@ -799,6 +834,12 @@ video {
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -856,6 +897,11 @@ p {
 
 body {
   min-width: 320px;
+}
+
+.entry-header {
+  visibility: hidden;
+  height: 0px;
 }
 
 /* ___________Header styles____________ */
@@ -1405,11 +1451,6 @@ input.tnp-submit {
 
 /* product carousel slider */
 
-.home-page .entry-header {
-  visibility: hidden;
-  height: 0px;
-}
-
 .home-page .wc-product-slider {
   padding-bottom: 4.5rem;
 }
@@ -1667,6 +1708,139 @@ input.tnp-submit {
 
 .home-page .wrc-swiper {
   padding-bottom: 3rem;
+}
+
+/* ___________About Page styles____________ */
+
+/* ---------- about page components styles ---------- */
+
+.about .tab {
+  overflow: hidden;
+  /* border: 1px solid #ccc; */
+  margin-left: 7px;
+  margin-right: 7px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+  display: flex;
+  overflow-x: auto;
+}
+
+/* Style the buttons inside the tab */
+
+.about .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Change background color of buttons on hover */
+
+.about .tab button:hover {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+}
+
+/* Create an active/current tablink class */
+
+.about .tab button.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* Style the tab content */
+
+.about .tabcontent {
+  display: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.about .wp-block-group {
+  margin-bottom: 1.5rem;
+}
+
+.about h2 {
+  font-size: 1.953rem ;
+  line-height: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .about h2 {
+    font-size: 3.052rem;
+    line-height: 4.5rem;
+  }
+}
+
+.about aside h2 {
+  font-size: 1.563rem;
+  line-height: 3rem;
+}
+
+.about .wp-block-group p,
+.about .wp-block-group .wp-block-list li {
+  margin-bottom: 1.5rem;
+}
+
+.about .wp-block-group .wp-block-list {
+  padding-left: .75rem;
+}
+
+.about .wp-block-gallery {
+  margin-top: 1.5rem;
+}
+
+.about .masonry-gallery-container>.wp-block-group__inner-container {
+  -moz-columns: 1;
+       columns: 1;
+  gap: 1.5rem;
+}
+
+.about .masonry-gallery-container>.wp-block-group__inner-container > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+@media (min-width: 640px) {
+  .about .masonry-gallery-container>.wp-block-group__inner-container {
+    -moz-columns: 2;
+         columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about .masonry-gallery-container>.wp-block-group__inner-container {
+    -moz-columns: 3;
+         columns: 3;
+  }
+}
+
+.about .masonry-gallery-container>.wp-block-group__inner-container figure img {
+  border-radius: 0.5rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /* ___________product detail page styles____________ */
@@ -2305,6 +2479,10 @@ input.tnp-submit {
 }
 
 @media (min-width: 768px) {
+  .md\:sticky {
+    position: sticky;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }

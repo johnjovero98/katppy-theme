@@ -46,6 +46,11 @@ body {
     @apply min-w-[320px];
 }
 
+
+.entry-header {
+    @apply invisible h-0;
+}
+
 /* ___________Header styles____________ */
 /* mini-cart styles */
 header .wc-block-mini-cart__button {
@@ -333,9 +338,6 @@ input.tnp-submit {
 }
 
 /* product carousel slider */
-.home-page .entry-header {
-    @apply invisible h-0;
-}
 
 .home-page .wc-product-slider {
     @apply pb-5
@@ -435,6 +437,81 @@ input.tnp-submit {
 
 .home-page .wrc-swiper {
     @apply pb-4
+}
+
+/* ___________About Page styles____________ */
+
+/* ---------- about page components styles ---------- */
+.about .tab {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    @apply border-gold-500 border-solid mx-[7px];
+    @apply flex overflow-x-auto;
+}
+
+/* Style the buttons inside the tab */
+.about .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    @apply font-bold bg-gold-100 rounded-t-lg;
+    @apply whitespace-nowrap;
+}
+
+/* Change background color of buttons on hover */
+.about .tab button:hover {
+    @apply bg-gold-100 rounded-t-lg;
+}
+
+/* Create an active/current tablink class */
+.about .tab button.active {
+    @apply bg-gold-500;
+    @apply rounded-t-lg;
+}
+
+/* Style the tab content */
+.about .tabcontent {
+    display: none;
+    @apply p-3;
+    @apply border-4 border-gold-500 rounded-lg shadow-xl;
+}
+
+
+.about .wp-block-group {
+    @apply mb-3
+}
+
+.about h2 {
+    @apply text-h4 lg:text-h2;
+}
+
+.about aside h2 {
+    @apply text-h5;
+}
+
+.about .wp-block-group p,
+.about .wp-block-group .wp-block-list li {
+    @apply mb-3
+}
+
+.about .wp-block-group .wp-block-list {
+    @apply pl-2;
+}
+
+.about .wp-block-gallery {
+    @apply mt-3
+}
+
+.about .masonry-gallery-container>.wp-block-group__inner-container {
+    @apply columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-3;
+}
+
+.about .masonry-gallery-container>.wp-block-group__inner-container figure img {
+    @apply rounded-lg shadow-lg;
 }
 
 /* ___________product detail page styles____________ */
