@@ -440,7 +440,6 @@ input.tnp-submit {
 }
 
 /* ___________About Page styles____________ */
-
 /* ---------- about page components styles ---------- */
 .about .tab {
     overflow: hidden;
@@ -513,6 +512,13 @@ input.tnp-submit {
 .about .masonry-gallery-container>.wp-block-group__inner-container figure img {
     @apply rounded-lg shadow-lg;
 }
+
+
+/* ___________Shop page styles____________ */
+.shop-page .woocommerce-breadcrumb {
+    @apply mb-3;
+}
+
 
 /* ___________product detail page styles____________ */
 .product-detail-page {

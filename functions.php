@@ -131,20 +131,6 @@ add_action('after_setup_theme', 'katppy_theme_content_width', 0);
  */
 function katppy_theme_widgets_init()
 {
-	register_sidebar(
-		array(
-			'name'          => esc_html__('Sidebar', 'katppy-theme'),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__('Add widgets here.', 'katppy-theme'),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-
-
-
 	// Header: Register Announcement Bar Widget Area
 	register_sidebar(
 		array(
@@ -211,9 +197,6 @@ function katppy_theme_widgets_init()
 		)
 	);
 
-
-
-
 	// Footer: Product links
 	register_sidebar(
 		array(
@@ -252,6 +235,21 @@ function katppy_theme_widgets_init()
 			'after_title'   => '</h2>',
 		)
 	);
+
+	// Shop page filter
+    // Product Filter Desktop
+    register_sidebar(
+        array(
+            'name'          => esc_html__('Product Filter', 'katppy'),
+            'id'            => 'product-filter',
+            'description'   => esc_html__('Add announcement here.', 'katppy'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s product-filter">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        )
+    );
+	
 }
 add_action('widgets_init', 'katppy_theme_widgets_init');
 
