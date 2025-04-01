@@ -1862,6 +1862,8 @@ input.tnp-submit {
   margin-bottom: 1.5rem;
 }
 
+/* shop page product card styles */
+
 .shop-page ul.products {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1912,6 +1914,8 @@ input.tnp-submit {
   float: none !important;
 }
 
+/* shop page filter styles */
+
 .shop-page-filter {
   white-space: nowrap;
   --tw-bg-opacity: 1;
@@ -1932,6 +1936,27 @@ input.tnp-submit {
   .shop-page-filter {
     width: 30%;
   }
+}
+
+/* shop page pagination styles */
+
+.shop-page nav.woocommerce-pagination ul,
+.shop-page nav.woocommerce-pagination ul li {
+  border: unset;
+}
+
+.shop-page nav.woocommerce-pagination ul li a:hover {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+}
+
+.shop-page nav.woocommerce-pagination ul li span.current {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
 }
 
 /* ___________product detail page styles____________ */

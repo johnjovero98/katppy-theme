@@ -237,19 +237,18 @@ function katppy_theme_widgets_init()
 	);
 
 	// Shop page filter
-    // Product Filter Desktop
-    register_sidebar(
-        array(
-            'name'          => esc_html__('Product Filter', 'katppy'),
-            'id'            => 'product-filter',
-            'description'   => esc_html__('Add announcement here.', 'katppy'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s product-filter">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>',
-        )
-    );
-	
+	// Product Filter Desktop
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Product Filter', 'katppy'),
+			'id'            => 'product-filter',
+			'description'   => esc_html__('Add announcement here.', 'katppy'),
+			'before_widget' => '<div id="%1$s" class="widget %2$s product-filter">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action('widgets_init', 'katppy_theme_widgets_init');
 
@@ -270,6 +269,8 @@ function katppy_theme_scripts()
 add_action('wp_enqueue_scripts', 'katppy_theme_scripts');
 
 
+/* ----------WooCommerce Overrides---------- */
+
 /**
  * Remove default WooCommerce CSS on the product detail page.
  */
@@ -283,6 +284,16 @@ function remove_woocommerce_styles()
 }
 add_action('wp_enqueue_scripts', 'remove_woocommerce_styles', 99);
 
+/**
+ *  Add pagination on shop page by changing the number of products displayed per page
+ */
+function katppy_custom_products_per_page($cols)
+{
+	// Set the number of products per page
+	$cols = 9;
+	return $cols;
+}
+add_filter('loop_shop_per_page', 'katppy_custom_products_per_page', 20);
 
 
 /**

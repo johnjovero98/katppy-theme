@@ -519,7 +519,7 @@ input.tnp-submit {
     @apply mb-3;
 }
 
-
+/* shop page product card styles */
 .shop-page ul.products {
     @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
     @apply gap-3;
@@ -541,13 +541,28 @@ input.tnp-submit {
     @apply float-none !important;
 }
 
-
+/* shop page filter styles */
 .shop-page-filter {
     @apply bg-gold-100 p-2 rounded-lg shadow-lg whitespace-nowrap;
     @apply border-2 border-gold-500 rounded-lg;
     @apply min-w-[270px] w-full lg:w-[30%];
 }
 
+/* shop page pagination styles */
+
+.shop-page nav.woocommerce-pagination ul,
+.shop-page nav.woocommerce-pagination ul li {
+    border: unset;
+}
+
+.shop-page nav.woocommerce-pagination ul li a:hover {
+    @apply bg-gold-100 rounded-lg;
+}
+
+.shop-page nav.woocommerce-pagination ul li span.current {
+    @apply bg-gold-500 text-black rounded-lg;
+
+}
 
 /* ___________product detail page styles____________ */
 .product-detail-page {
