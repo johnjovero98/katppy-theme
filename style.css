@@ -2090,6 +2090,24 @@ input.tnp-submit {
   color: rgb(29 19 13 / var(--tw-text-opacity, 1));
 }
 
+/* shop page ad banner styles */
+
+.shop-page .wp-block-image a {
+  display: block;
+}
+
+.shop-page .wp-block-image img {
+  width: 100%;
+  border-radius: 0.5rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shop-page .ad-banner {
+  margin-bottom: 1.5rem;
+}
+
 /* ___________product detail page styles____________ */
 
 .product-detail-page {
@@ -2143,8 +2161,8 @@ input.tnp-submit {
 
 .product-detail-page .woocommerce-breadcrumb,
 .shop-page .woocommerce-breadcrumb {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   font-size: 0.8rem;
   line-height: 1.5rem;
 }

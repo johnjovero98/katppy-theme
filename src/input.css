@@ -644,6 +644,20 @@ input.tnp-submit {
 
 }
 
+
+/* shop page ad banner styles */ 
+.shop-page .wp-block-image a {
+    @apply block
+}
+
+.shop-page .wp-block-image img {
+    @apply w-full rounded-lg shadow-lg;
+}
+
+.shop-page .ad-banner {
+    @apply mb-3;
+}
+
 /* ___________product detail page styles____________ */
 .product-detail-page {
     @apply container mx-auto px-3;
@@ -659,7 +673,7 @@ input.tnp-submit {
 
 .product-detail-page .woocommerce-breadcrumb,
 .shop-page .woocommerce-breadcrumb {
-    @apply my-4 text-small;
+    @apply my-3 text-small;
 }
 
 .product-detail-page .summary.entry-summary {

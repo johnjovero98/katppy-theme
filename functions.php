@@ -237,13 +237,25 @@ function katppy_theme_widgets_init()
 	);
 
 	// Shop page filter
-	// Product Filter Desktop
 	register_sidebar(
 		array(
 			'name'          => esc_html__('Product Filter', 'katppy'),
 			'id'            => 'product-filter',
 			'description'   => esc_html__('Add announcement here.', 'katppy'),
 			'before_widget' => '<div id="%1$s" class="widget %2$s product-filter">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	// Shop page Ad Banner
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Ad Banner', 'katppy'),
+			'id'            => 'ad-banner',
+			'description'   => esc_html__('Add an Ad Banner here.', 'katppy'),
+			'before_widget' => '<div id="%1$s" class="widget %2$s ad-banner">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',

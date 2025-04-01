@@ -20,7 +20,7 @@ defined('ABSPATH') || exit;
 get_header('shop');
 ?>
 
-<div class="shop-page container mx-auto px-3 py-4">
+<div class="shop-page container mx-auto px-3">
 	<?php
 	/**
 	 * Hook: woocommerce_before_main_content.
@@ -31,6 +31,8 @@ get_header('shop');
 	 */
 	do_action('woocommerce_before_main_content');
 	?>
+
+	<?php dynamic_sidebar('ad-banner') ?>
 
 	<div class="mb-4 text-h1">
 		<?php
