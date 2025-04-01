@@ -1984,7 +1984,7 @@ input.tnp-submit {
 
 .shop-page .filter-button:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+  background-color: rgb(242 210 147 / var(--tw-bg-opacity, 1));
 }
 
 @media (min-width: 1024px) {
@@ -2020,6 +2020,51 @@ input.tnp-submit {
 
 .shop-page .product-filter-wrapper.is-mobile.show-mobile-filter {
   bottom: 0px;
+}
+
+.shop-page .irs--flat .irs-bar,
+.shop-page .irs--flat .irs-to,
+.shop-page .irs--flat .irs-from,
+.shop-page .irs--flat .irs-handle>i:first-child {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 19 13 / var(--tw-bg-opacity, 1));
+}
+
+.shop-page .irs--flat .irs-to:before,
+.shop-page .irs--flat .irs-from:before {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(29 19 13 / var(--tw-border-opacity, 1));
+}
+
+.shop-page .berocket_single_filter_widget .bapf-clean-rounded li label {
+  border-radius: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
+  border-radius: 9999px;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+}
+
+.shop-page .berocket_single_filter_widget .bapf-clean-rounded li.checked label {
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.shop-page .berocket_single_filter_widget .bapf-clean-rounded li.checked label:before {
+  top:13.5px;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+}
+
+.shop-page .bapf_head h3 {
+  font-size: 1.563rem;
+  line-height: 3rem;
 }
 
 /* shop page pagination styles */
