@@ -1864,10 +1864,6 @@ input.tnp-submit {
 
 /* ___________Shop page styles____________ */
 
-.shop-page .woocommerce-breadcrumb {
-  margin-bottom: 1.5rem;
-}
-
 /* shop page product card styles */
 
 .shop-page ul.products {
@@ -1920,6 +1916,30 @@ input.tnp-submit {
   float: none !important;
 }
 
+/* shop page before product cards content styles */
+
+.shop-page .woocommerce-before-product-card-content {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.shop-page .woocommerce-before-product-card-content .woocommerce-notices-wrapper {
+  display: none;
+}
+
+.shop-page .woocommerce-before-product-card-content .woocommerce-result-count {
+  margin: 0px;
+  order: 1;
+}
+
+.shop-page .woocommerce-before-product-card-content .woocommerce-ordering {
+  margin: 0px;
+  order: 0;
+}
+
 /* shop page filter styles */
 
 .shop-page .product-filter-wrapper {
@@ -1965,10 +1985,6 @@ input.tnp-submit {
 .shop-page .filter-button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
-}
-
-.shop-page .filter-button {
-  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -2078,7 +2094,8 @@ input.tnp-submit {
   display: none !important;
 }
 
-.product-detail-page .woocommerce-breadcrumb {
+.product-detail-page .woocommerce-breadcrumb,
+.shop-page .woocommerce-breadcrumb {
   margin-top: 3rem;
   margin-bottom: 3rem;
   font-size: 0.8rem;

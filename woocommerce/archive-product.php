@@ -32,7 +32,7 @@ get_header('shop');
 	do_action('woocommerce_before_main_content');
 	?>
 
-	<div class="mb-3 text-h1">
+	<div class="mb-4 text-h1">
 		<?php
 		/**
 		 * Hook: woocommerce_shop_loop_header.
@@ -61,7 +61,7 @@ get_header('shop');
 						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
 					</svg>
 				</button>
-				
+
 				<?php dynamic_sidebar('product-filter') ?>
 			</div>
 		</div>
@@ -70,7 +70,7 @@ get_header('shop');
 		<div class="shop-page-content">
 			<?php
 			if (woocommerce_product_loop()) {
-
+				echo '<div class="woocommerce-before-product-card-content">';
 				/**
 				 * Hook: woocommerce_before_shop_loop.
 				 *
@@ -79,9 +79,10 @@ get_header('shop');
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
 				do_action('woocommerce_before_shop_loop');
+				echo '</div>';
 
+				// product cards
 				woocommerce_product_loop_start();
-
 				if (wc_get_loop_prop('total')) {
 					while (have_posts()) {
 						the_post();
