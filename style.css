@@ -689,6 +689,10 @@ video {
   flex-wrap: wrap;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
@@ -790,6 +794,11 @@ video {
   text-align: center;
 }
 
+.text-h1 {
+  font-size: 3.815rem;
+  line-height: 4.5rem;
+}
+
 .text-h2 {
   font-size: 3.052rem;
   line-height: 4.5rem;
@@ -808,11 +817,6 @@ video {
 .text-p {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.text-h1 {
-  font-size: 3.815rem;
-  line-height: 4.5rem;
 }
 
 .font-bold {
@@ -1856,6 +1860,78 @@ input.tnp-submit {
 
 .shop-page .woocommerce-breadcrumb {
   margin-bottom: 1.5rem;
+}
+
+.shop-page ul.products {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .shop-page ul.products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .shop-page ul.products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.shop-page ul.products {
+  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .shop-page ul.products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .shop-page ul.products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.shop-page ul.products {
+  gap: 1.5rem;
+}
+
+.shop-page ul.products::before,
+.shop-page ul.products::after {
+  display: none;
+}
+
+.shop-page ul.products li.product {
+  margin: 0px !important;
+  width: 100% !important;
+  float: none !important;
+}
+
+.shop-page-filter {
+  white-space: nowrap;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+  padding: .75rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-radius: 0.5rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+  width: 100%;
+  min-width: 270px;
+}
+
+@media (min-width: 1024px) {
+  .shop-page-filter {
+    width: 30%;
+  }
 }
 
 /* ___________product detail page styles____________ */

@@ -520,6 +520,35 @@ input.tnp-submit {
 }
 
 
+.shop-page ul.products {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+    @apply gap-3;
+}
+
+.shop-page ul.products {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+    @apply gap-3;
+}
+
+.shop-page ul.products::before,
+.shop-page ul.products::after {
+    @apply hidden;
+}
+
+.shop-page ul.products li.product {
+    @apply m-0 !important;
+    @apply w-full !important;
+    @apply float-none !important;
+}
+
+
+.shop-page-filter {
+    @apply bg-gold-100 p-2 rounded-lg shadow-lg whitespace-nowrap;
+    @apply border-2 border-gold-500 rounded-lg;
+    @apply min-w-[270px] w-full lg:w-[30%];
+}
+
+
 /* ___________product detail page styles____________ */
 .product-detail-page {
     @apply container mx-auto px-3;
