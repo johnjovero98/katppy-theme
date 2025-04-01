@@ -262,6 +262,11 @@ function katppy_theme_scripts()
 
 	wp_enqueue_script('katppy-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
+	// Conditionally load shop-filter.js on shop and shop archive pages
+	if (is_shop() || is_product_category() || is_product_tag()) {
+		wp_enqueue_script('katppy-theme-shop-filter', get_template_directory_uri() . '/js/shop-filter.js', array(), null, true);
+	};
+
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}

@@ -639,6 +639,11 @@ video {
   display: none;
 }
 
+.size-3 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .size-4 {
   width: 3rem;
   height: 3rem;
@@ -912,7 +917,8 @@ body {
   min-width: 320px;
 }
 
-.entry-header {
+.about .entry-header,
+.home-page .entry-header {
   visibility: hidden;
   height: 0px;
 }
@@ -1916,7 +1922,7 @@ input.tnp-submit {
 
 /* shop page filter styles */
 
-.shop-page-filter {
+.shop-page .product-filter-wrapper {
   white-space: nowrap;
   --tw-bg-opacity: 1;
   background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
@@ -1933,9 +1939,71 @@ input.tnp-submit {
 }
 
 @media (min-width: 1024px) {
-  .shop-page-filter {
+  .shop-page .product-filter-wrapper {
     width: 30%;
   }
+}
+
+.shop-page .filter-button {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+}
+
+.shop-page .filter-button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+}
+
+.shop-page .filter-button {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .shop-page .filter-button {
+    display: none;
+  }
+}
+
+.shop-page .filter-close-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .shop-page .filter-close-button {
+    display: none;
+  }
+}
+
+.shop-page .product-filter-wrapper.is-mobile {
+  position: fixed;
+  bottom: -200%;
+  left: 0;
+  height: 300px;
+  overflow-y: scroll;
+  z-index: 10;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shop-page .product-filter-wrapper.is-mobile.show-mobile-filter {
+  bottom: 0px;
 }
 
 /* shop page pagination styles */
