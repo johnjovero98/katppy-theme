@@ -599,12 +599,14 @@ input.tnp-submit {
 .shop-page .irs--flat .irs-bar,
 .shop-page .irs--flat .irs-to,
 .shop-page .irs--flat .irs-from,
+.shop-page .irs--flat .irs-single,
 .shop-page .irs--flat .irs-handle>i:first-child {
     @apply bg-black;
 }
 
 .shop-page .irs--flat .irs-to:before,
-.shop-page .irs--flat .irs-from:before {
+.shop-page .irs--flat .irs-from:before,
+.shop-page .irs--flat .irs-single:before {
     @apply border-t-black;
 }
 

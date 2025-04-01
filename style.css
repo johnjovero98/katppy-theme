@@ -2025,13 +2025,15 @@ input.tnp-submit {
 .shop-page .irs--flat .irs-bar,
 .shop-page .irs--flat .irs-to,
 .shop-page .irs--flat .irs-from,
+.shop-page .irs--flat .irs-single,
 .shop-page .irs--flat .irs-handle>i:first-child {
   --tw-bg-opacity: 1;
   background-color: rgb(29 19 13 / var(--tw-bg-opacity, 1));
 }
 
 .shop-page .irs--flat .irs-to:before,
-.shop-page .irs--flat .irs-from:before {
+.shop-page .irs--flat .irs-from:before,
+.shop-page .irs--flat .irs-single:before {
   --tw-border-opacity: 1;
   border-top-color: rgb(29 19 13 / var(--tw-border-opacity, 1));
 }
