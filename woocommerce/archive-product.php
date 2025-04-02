@@ -34,7 +34,7 @@ get_header('shop');
 
 	<?php dynamic_sidebar('ad-banner') ?>
 
-	<div class="mb-4 text-h1">
+	<div class="my-4 text-h1">
 		<?php
 		/**
 		 * Hook: woocommerce_shop_loop_header.
