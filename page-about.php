@@ -34,7 +34,7 @@ get_header();
 			<!-- tab buttons -->
 			<div class="tab">
 				<button class="tablinks active" onclick="openContent(event, 'About')">About Us</button>
-				<button class="tablinks" onclick="openContent(event, 'Gallery')">Galerie Décoden</button>
+				<button class="tablinks" onclick="openContent(event, 'Gallery')">Decoden Gallery</button>
 			</div>
 			<!-- tab content -->
 			<div id="About" class="tabcontent" style="display: block;">

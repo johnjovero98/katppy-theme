@@ -46,9 +46,11 @@ body {
     @apply min-w-[320px];
 }
 
+/* hide entry header h1 */
 
 .about .entry-header,
-.home-page .entry-header {
+.home-page .entry-header,
+.contact-page .entry-header {
     @apply invisible h-0;
 }
 
@@ -101,7 +103,7 @@ header nav.main-navigation.is-desktop .sub-menu>.menu-item>a {
 .overlay {
     @apply transition-all duration-300 ease-in-out;
     @apply hidden;
-}       
+}
 
 .overlay.show-overlay {
     @apply block;
@@ -441,7 +443,6 @@ input.tnp-submit {
 }
 
 /* ___________About Page styles____________ */
-/* ---------- about page components styles ---------- */
 .about .tab {
     overflow: hidden;
     /* border: 1px solid #ccc; */
@@ -656,6 +657,42 @@ input.tnp-submit {
 
 .shop-page .ad-banner {
     @apply mb-3;
+}
+
+/* ___________contact page styles____________ */
+.contact-page h2 {
+    @apply text-h4 md:text-h2 mb-3;
+}
+
+.contact-page p {
+    @apply mb-3;
+}
+
+.contact-page .contact-form {
+    @apply bg-[url(https://katppy.com/wp-content/themes/katppy-theme/images/contact-cat.jpg)];
+    @apply bg-cover relative p-3 md:p-4;
+    @apply text-white;
+    @apply rounded-lg shadow-xl;
+
+}
+
+.contact-page .contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    @apply z-10 rounded-lg;
+    /* Adjust opacity & color */
+}
+
+/* forminator overrides */
+.contact-page .forminator-ui#forminator-module-260.forminator-design--default .forminator-button-submit {
+    @apply bg-gold-500 py-0 px-3 leading-[3rem] font-bold text-black text-p rounded-lg;
+    @apply border-4 border-solid border-gold-500;
+    @apply hover:bg-gold-100 hover:border-4 hover:border-solid hover:border-gold-500
 }
 
 /* ___________product detail page styles____________ */

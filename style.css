@@ -667,6 +667,10 @@ video {
   width: 50px;
 }
 
+.w-\[70\%\] {
+  width: 70%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -926,8 +930,11 @@ body {
   min-width: 320px;
 }
 
+/* hide entry header h1 */
+
 .about .entry-header,
-.home-page .entry-header {
+.home-page .entry-header,
+.contact-page .entry-header {
   visibility: hidden;
   height: 0px;
 }
@@ -1740,8 +1747,6 @@ input.tnp-submit {
 
 /* ___________About Page styles____________ */
 
-/* ---------- about page components styles ---------- */
-
 .about .tab {
   overflow: hidden;
   /* border: 1px solid #ccc; */
@@ -2115,6 +2120,90 @@ input.tnp-submit {
 
 .shop-page .ad-banner {
   margin-bottom: 1.5rem;
+}
+
+/* ___________contact page styles____________ */
+
+.contact-page h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.953rem ;
+  line-height: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contact-page h2 {
+    font-size: 3.052rem;
+    line-height: 4.5rem;
+  }
+}
+
+.contact-page p {
+  margin-bottom: 1.5rem;
+}
+
+.contact-page .contact-form {
+  background-image: url(https://katppy.com/wp-content/themes/katppy-theme/images/contact-cat.jpg);
+  position: relative;
+  background-size: cover;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .contact-page .contact-form {
+    padding: 3rem;
+  }
+}
+
+.contact-page .contact-form {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  border-radius: 0.5rem;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.contact-page .contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 10;
+  border-radius: 0.5rem;
+  /* Adjust opacity & color */
+}
+
+/* forminator overrides */
+
+.contact-page .forminator-ui#forminator-module-260.forminator-design--default .forminator-button-submit {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 3rem;
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
+  border-width: 4px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+}
+
+.contact-page .forminator-ui#forminator-module-260.forminator-design--default .forminator-button-submit:hover {
+  border-width: 4px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
 }
 
 /* ___________product detail page styles____________ */
@@ -2816,5 +2905,13 @@ input.tnp-submit {
 @media (min-width: 1280px) {
   .xl\:mr-\[6rem\] {
     margin-right: 6rem;
+  }
+
+  .xl\:w-1\/2 {
+    width: 50%;
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
   }
 }
