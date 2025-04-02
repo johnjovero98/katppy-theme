@@ -98,12 +98,12 @@ header nav.main-navigation.is-desktop .sub-menu>.menu-item>a {
 
 
 /* mobile navigation */
-header .overlay {
+.overlay {
     @apply transition-all duration-300 ease-in-out;
     @apply hidden;
-}
+}       
 
-header .overlay.show-overlay {
+.overlay.show-overlay {
     @apply block;
     @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10;
     @apply cursor-pointer;
@@ -583,7 +583,7 @@ input.tnp-submit {
 
 .shop-page .product-filter-wrapper.is-mobile {
     position: fixed;
-    z-index: 5;
+    z-index: 11;
     bottom: -200%;
     left: 0;
     height: 300px;
@@ -621,7 +621,7 @@ input.tnp-submit {
 }
 
 .shop-page .berocket_single_filter_widget .bapf-clean-rounded li.checked label:before {
-    top:13.5px;
+    top: 13.5px;
     @apply border-gold-500;
 }
 
@@ -645,7 +645,7 @@ input.tnp-submit {
 }
 
 
-/* shop page ad banner styles */ 
+/* shop page ad banner styles */
 .shop-page .wp-block-image a {
     @apply block
 }

@@ -57,6 +57,8 @@ get_header('shop');
 				Filters
 			</button>
 
+			
+			<div id="filter-overlay" class="overlay"></div><!-- mobile overlay -->
 			<div class="product-filter-wrapper" id="product-filter-wrapper" aria-hidden="true">
 				<button class="filter-close-button" aria-label="Close filters">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">

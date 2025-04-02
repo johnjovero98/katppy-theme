@@ -691,6 +691,10 @@ video {
   max-width: 9rem;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1011,14 +1015,14 @@ header nav.main-navigation.is-desktop .sub-menu>.menu-item>a:hover {
 
 /* mobile navigation */
 
-header .overlay {
+.overlay {
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: none;
 }
 
-header .overlay.show-overlay {
+.overlay.show-overlay {
   display: block;
   position: fixed;
   top: 0px;
@@ -1032,7 +1036,7 @@ header .overlay.show-overlay {
 }
 
 @media (min-width: 1024px) {
-  header .overlay.show-overlay {
+  .overlay.show-overlay {
     display: none;
   }
 }
@@ -2064,7 +2068,7 @@ input.tnp-submit {
 }
 
 .shop-page .berocket_single_filter_widget .bapf-clean-rounded li.checked label:before {
-  top:13.5px;
+  top: 13.5px;
   --tw-border-opacity: 1;
   border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
 }
