@@ -2176,36 +2176,6 @@ input.tnp-submit {
   /* Adjust opacity & color */
 }
 
-/* forminator overrides */
-
-.contact-page .forminator-ui#forminator-module-260.forminator-design--default .forminator-button-submit {
-  border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 3rem;
-  --tw-text-opacity: 1;
-  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
-  border-width: 4px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
-}
-
-.contact-page .forminator-ui#forminator-module-260.forminator-design--default .forminator-button-submit:hover {
-  border-width: 4px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
-}
-
 /* ___________product detail page styles____________ */
 
 .product-detail-page {
