@@ -688,12 +688,6 @@ input.tnp-submit {
     /* Adjust opacity & color */
 }
 
-/* forminator overrides */
-.contact-page .forminator-ui#forminator-module-260.forminator-design--default .forminator-button-submit {
-    @apply bg-gold-500 py-0 px-3 leading-[3rem] font-bold text-black text-p rounded-lg;
-    @apply border-4 border-solid border-gold-500;
-    @apply hover:bg-gold-100 hover:border-4 hover:border-solid hover:border-gold-500
-}
 
 /* ___________product detail page styles____________ */
 .product-detail-page {
