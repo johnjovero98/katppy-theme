@@ -18,9 +18,7 @@ get_header();
 
 <main id="primary" class="site-main contact-page text-p">
 
-    <div class="container mx-auto p-3">
-
-
+    <div class="container mx-auto px-3 py-4">
         <div class="flex flex-col xl:flex-row gap-4">
             <!-- contact instructions -->
             <section class="xl:w-1/2">
