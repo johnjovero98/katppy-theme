@@ -307,7 +307,7 @@ add_action('wp_enqueue_scripts', 'remove_woocommerce_styles', 99);
 function katppy_custom_products_per_page($cols)
 {
 	// Set the number of products per page
-	$cols = 9;
+	$cols = 12;
 	return $cols;
 }
 add_filter('loop_shop_per_page', 'katppy_custom_products_per_page', 20);

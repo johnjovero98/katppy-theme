@@ -525,7 +525,7 @@ input.tnp-submit {
 }
 
 .shop-page ul.products {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4;
     @apply gap-3;
 }
 
@@ -1038,4 +1038,69 @@ input.tnp-submit {
 
 .cart-page .wc-block-components-quantity-selector .wc-block-components-quantity-selector__button {
     @apply bg-gold-500
+}
+
+
+/* mini cart components styles */
+.wc-block-mini-cart__drawer .wc-block-mini-cart__empty-cart-wrapper strong {
+    @apply text-h3 font-heading mb-3 inline-block text-balance;
+}
+
+/* button styles */
+.wc-block-mini-cart__drawer .wc-block-mini-cart__empty-cart-wrapper .wc-block-components-button,
+.wc-block-mini-cart__drawer .wc-block-mini-cart__footer .wp-block-woocommerce-mini-cart-cart-button-block,
+.checkout-page .wc-block-components-checkout-place-order-button {
+    @apply p-0 !important;
+    @apply leading-[3rem] px-3 bg-gold-500 text-black font-bold !important;
+    @apply border-2 border-solid border-gold-500 rounded-lg !important;
+    @apply hover:bg-gold-300 !important;
+    box-shadow: unset !important;
+}
+
+
+/* __________ checkout-page styles __________ */
+.checkout-page .wp-block-woocommerce-checkout-order-summary-block {
+    @apply rounded-lg shadow-lg;
+}
+
+/* order confirmation styles */
+.checkout-page .woocommerce-thankyou-order-received {
+    @apply mb-3 text-balance;
+}
+
+
+.checkout-page .woocommerce-thankyou-order-details {
+    @apply flex flex-col gap-2;
+}
+
+.checkout-page ul.order_details li {
+    border-right: unset;
+}
+
+.checkout-page .woocommerce ul.order_details::after, 
+.checkout-page .woocommerce ul.order_details::before {
+    display: none;
+}   
+
+
+.checkout-page .woocommerce-order-details__title,
+.checkout-page .woocommerce-customer-details h2 {
+    @apply text-h5
+}
+
+.checkout-page .woocommerce .col2-set::after, 
+.checkout-page .woocommerce .col2-set::before, 
+.checkout-page .woocommerce-page .col2-set::after, 
+.checkout-page .woocommerce-page .col2-set::before{
+    display: none;
+}
+
+.checkout-page .woocommerce-customer-details .addresses {
+    @apply flex flex-col lg:flex-row gap-3 justify-between;
+}
+
+.checkout-page .woocommerce-customer-details address {
+    @apply shadow-lg rounded-lg p-2;
+    @apply bg-gold-100;
+    @apply border-gold-500;
 }
