@@ -1059,7 +1059,7 @@ input.tnp-submit {
 
 
 /* __________ checkout-page styles __________ */
-.checkout-page .wp-block-woocommerce-checkout-order-summary-block {
+.checkout-page .wp-block-woocommerce-checkout-totals-block.is-large .wp-block-woocommerce-checkout-order-summary-block {
     @apply rounded-lg shadow-lg;
 }
 
@@ -1077,10 +1077,10 @@ input.tnp-submit {
     border-right: unset;
 }
 
-.checkout-page .woocommerce ul.order_details::after, 
+.checkout-page .woocommerce ul.order_details::after,
 .checkout-page .woocommerce ul.order_details::before {
     display: none;
-}   
+}
 
 
 .checkout-page .woocommerce-order-details__title,
@@ -1088,10 +1088,10 @@ input.tnp-submit {
     @apply text-h5
 }
 
-.checkout-page .woocommerce .col2-set::after, 
-.checkout-page .woocommerce .col2-set::before, 
-.checkout-page .woocommerce-page .col2-set::after, 
-.checkout-page .woocommerce-page .col2-set::before{
+.checkout-page .woocommerce .col2-set::after,
+.checkout-page .woocommerce .col2-set::before,
+.checkout-page .woocommerce-page .col2-set::after,
+.checkout-page .woocommerce-page .col2-set::before {
     display: none;
 }
 
@@ -1102,5 +1102,45 @@ input.tnp-submit {
 .checkout-page .woocommerce-customer-details address {
     @apply shadow-lg rounded-lg p-2;
     @apply bg-gold-100;
-    @apply border-gold-500;
+    @apply border-2 border-gold-500;
+}
+
+
+/* __________ shipping and returns page __________ */
+.shipping-returns-page h1 {
+    @apply text-off-white;
+    text-shadow: 1px 1px 5px rgba(29, 19, 13, .5);
+}
+
+.shipping-returns-page h2 {
+    @apply text-h3
+}
+
+.shipping-returns-page h3,
+.shipping-returns-page h4 {
+    @apply text-h6 font-body font-bold;
+}
+
+.shipping-returns-page a {
+    @apply text-gold-500;
+    @apply hover:text-gold-300 hover:underline
+}
+
+.shipping-returns-page .policy-content .wp-block-group {
+    @apply mb-3
+}
+
+.shipping-returns-page .wp-block-list {
+    @apply pl-[2rem]
+}
+
+.shipping-returns-page .wp-block-list li {
+    @apply relative mb-2
+}
+
+
+.shipping-returns-page .wp-block-list li::before {
+    content: "🐾";
+    position: absolute;
+    left: -1.5rem;
 }

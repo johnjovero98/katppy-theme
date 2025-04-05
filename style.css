@@ -784,6 +784,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-4 {
+  padding: 3rem;
+}
+
 .p-\[4\.5px\] {
   padding: 4.5px;
 }
@@ -2865,7 +2869,7 @@ input.tnp-submit {
 
 /* __________ checkout-page styles __________ */
 
-.checkout-page .wp-block-woocommerce-checkout-order-summary-block {
+.checkout-page .wp-block-woocommerce-checkout-totals-block.is-large .wp-block-woocommerce-checkout-order-summary-block {
   border-radius: 0.5rem;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -2889,7 +2893,7 @@ input.tnp-submit {
   border-right: unset;
 }
 
-.checkout-page .woocommerce ul.order_details::after, 
+.checkout-page .woocommerce ul.order_details::after,
 .checkout-page .woocommerce ul.order_details::before {
   display: none;
 }
@@ -2900,10 +2904,10 @@ input.tnp-submit {
   line-height: 3rem;
 }
 
-.checkout-page .woocommerce .col2-set::after, 
-.checkout-page .woocommerce .col2-set::before, 
-.checkout-page .woocommerce-page .col2-set::after, 
-.checkout-page .woocommerce-page .col2-set::before{
+.checkout-page .woocommerce .col2-set::after,
+.checkout-page .woocommerce .col2-set::before,
+.checkout-page .woocommerce-page .col2-set::after,
+.checkout-page .woocommerce-page .col2-set::before {
   display: none;
 }
 
@@ -2928,8 +2932,60 @@ input.tnp-submit {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-bg-opacity: 1;
   background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+  border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+}
+
+/* __________ shipping and returns page __________ */
+
+.shipping-returns-page h1 {
+  --tw-text-opacity: 1;
+  color: rgb(250 246 243 / var(--tw-text-opacity, 1));
+  text-shadow: 1px 1px 5px rgba(29, 19, 13, .5);
+}
+
+.shipping-returns-page h2 {
+  font-size: 2.441rem;
+  line-height: 3rem;
+}
+
+.shipping-returns-page h3,
+.shipping-returns-page h4 {
+  font-family: "Montserrat", san-serif;
+  font-size: 1.25rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+.shipping-returns-page a {
+  --tw-text-opacity: 1;
+  color: rgb(233 180 75 / var(--tw-text-opacity, 1));
+}
+
+.shipping-returns-page a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(242 210 147 / var(--tw-text-opacity, 1));
+  text-decoration-line: underline;
+}
+
+.shipping-returns-page .policy-content .wp-block-group {
+  margin-bottom: 1.5rem;
+}
+
+.shipping-returns-page .wp-block-list {
+  padding-left: 2rem;
+}
+
+.shipping-returns-page .wp-block-list li {
+  position: relative;
+  margin-bottom: .75rem;
+}
+
+.shipping-returns-page .wp-block-list li::before {
+  content: "🐾";
+  position: absolute;
+  left: -1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -2956,6 +3012,18 @@ input.tnp-submit {
 }
 
 @media (min-width: 1024px) {
+  .lg\:sticky {
+    position: sticky;
+  }
+
+  .lg\:top-\[3rem\] {
+    top: 3rem;
+  }
+
+  .lg\:order-1 {
+    order: 1;
+  }
+
   .lg\:mr-\[3rem\] {
     margin-right: 3rem;
   }
@@ -2966,6 +3034,10 @@ input.tnp-submit {
 
   .lg\:w-\[30\%\] {
     width: 30%;
+  }
+
+  .lg\:w-\[80\%\] {
+    width: 80%;
   }
 
   .lg\:flex-row {
