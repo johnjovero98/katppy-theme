@@ -281,8 +281,14 @@ function katppy_theme_scripts()
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
-	}
+	};
+
+
+	if (is_page('faq')) {
+		wp_enqueue_script('katppy-theme-accordion', get_template_directory_uri() . '/js/faq-accordion.js', array(), _S_VERSION, true);
+	};
 }
+
 add_action('wp_enqueue_scripts', 'katppy_theme_scripts');
 
 
