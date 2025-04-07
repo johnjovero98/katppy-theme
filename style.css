@@ -2988,6 +2988,79 @@ input.tnp-submit {
   left: -1.5rem;
 }
 
+/* __________ faq page styles __________ */
+
+.faq h2 {
+  margin-top: 54px;
+}
+
+.faq h3 {
+  margin: 54px 0 27px 0;
+}
+
+.faq h4 {
+  line-height: 1.25;
+  padding-right: 1rem;
+}
+
+.faq .accordion {
+  width: 100%;
+}
+
+.faq .accordion-item {
+  margin-bottom: 5px;
+}
+
+.faq .accordion-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 27px;
+  padding: 13.5px;
+  border-top: 3px solid #E9B44B;
+  font-weight: 700;
+}
+
+.faq section .accordion .accordion-item:last-of-type .accordion-question {
+  border-bottom: 3px solid #E9B44B;
+}
+
+.faq .accordion-question:hover {
+  cursor: pointer;
+}
+
+.faq .accordion-answer {
+  display: none;
+  max-height: 0;
+  transition: max-height 0.6s ease;
+  padding: 13.5px;
+  overflow: hidden;
+}
+
+.faq .accordion-answer.active {
+  display: block;
+  max-height: unset;
+}
+
+.faq .accordion-answer ul {
+  list-style: disc;
+  margin-left: 1rem;
+}
+
+.faq .accordion-answer p,
+.faq .accordion-answer ul li {
+  margin-bottom: 13.5px;
+}
+
+.faq .accordion-answer p span,
+.faq .accordion-answer ul li span {
+  font-weight: 700;
+}
+
+.faq .accordion-answer p a {
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   .md\:sticky {
     position: sticky;
