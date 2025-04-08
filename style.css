@@ -3024,10 +3024,9 @@ input.tnp-submit {
 }
 
 .faq .down-chevron {
-  width: 3rem;
-  height: 3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex-shrink: 0;
-  padding: 6px;
   --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   transition-property: all;
@@ -3052,7 +3051,7 @@ input.tnp-submit {
 }
 
 .faq .accordion-item .accordion-answer.show-answer {
-  margin-top: .75rem;
+  margin-top: 1.5rem;
   max-height: 1000px;
 }
 
@@ -3062,16 +3061,14 @@ input.tnp-submit {
 }
 
 .faq .accordion-item .accordion-question h4 {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .faq .accordion-item .accordion-question h4 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
+.faq .accordion-item .accordion-question:hover h4 {
+  --tw-text-opacity: 1;
+  color: rgb(233 180 75 / var(--tw-text-opacity, 1));
 }
 
 .faq .accordion-item .accordion-answer > * {

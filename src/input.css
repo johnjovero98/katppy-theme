@@ -1170,7 +1170,7 @@ input.tnp-submit {
 
 
 .faq .down-chevron {
-    @apply size-4 shrink-0 p-[6px];
+    @apply size-3 shrink-0;
     @apply rotate-0;
     @apply transition-all ease-in-out duration-300;
 }
@@ -1187,7 +1187,7 @@ input.tnp-submit {
 }
 
 .faq .accordion-item .accordion-answer.show-answer {
-    @apply max-h-[1000px] mt-2;
+    @apply max-h-[1000px] mt-3;
 }
 
 .faq  .accordion-question .down-chevron.rotate {
@@ -1195,7 +1195,11 @@ input.tnp-submit {
 }
 
 .faq .accordion-item .accordion-question h4 {
-    @apply  text-p md:text-h6 md:leading-[1.5rem] font-bold;
+    @apply  text-h6 leading-[1.5rem] font-bold;
+}
+
+.faq .accordion-item .accordion-question:hover h4 {
+    @apply  text-gold-500;
 }
 
 .faq .accordion-item .accordion-answer > * {
