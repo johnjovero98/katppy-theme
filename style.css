@@ -1498,7 +1498,8 @@ input.tnp-submit {
   padding-bottom: 4.5rem;
 }
 
-.home-page .wc-product-slider .add_to_cart_button {
+.home-page .wc-product-slider .add_to_cart_button,
+.home-page .wc-product-slider .button {
   padding: 0px;
   --tw-bg-opacity: 1;
   background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
@@ -1514,9 +1515,16 @@ input.tnp-submit {
   border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
 }
 
-.home-page .wc-product-slider .add_to_cart_button:hover {
+.home-page .wc-product-slider .add_to_cart_button:hover,
+.home-page .wc-product-slider .button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(242 210 147 / var(--tw-bg-opacity, 1));
+}
+
+.home-page .wc-product-slider .add_to_cart_button,
+.home-page .wc-product-slider .button {
+  display: inline-block;
+  font-weight: 700;
 }
 
 .home-page .swiper-button-next,

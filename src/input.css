@@ -346,11 +346,13 @@ input.tnp-submit {
     @apply pb-5
 }
 
-.home-page .wc-product-slider .add_to_cart_button {
+.home-page .wc-product-slider .add_to_cart_button,
+.home-page .wc-product-slider .button {
     @apply p-0;
     @apply leading-[3rem] px-3 bg-gold-500 text-black;
     @apply border-2 border-solid border-gold-500 rounded-lg;
     @apply hover:bg-gold-300;
+    @apply inline-block font-bold
 }
 
 .home-page .swiper-button-next,
