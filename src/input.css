@@ -198,7 +198,7 @@ header .wmc-currency-wrapper:hover .wmc-current-currency-arrow  svg {
 }
 
 header .wmc-current-currency>span:first-child {
-    @apply mr-2
+    @apply mr-[.5rem]
 }
 
 

@@ -1181,7 +1181,7 @@ header .wmc-currency-wrapper:hover .wmc-current-currency-arrow  svg {
 }
 
 header .wmc-current-currency>span:first-child {
-  margin-right: .75rem;
+  margin-right: .5rem;
 }
 
 /* desktop navigation */
