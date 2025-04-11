@@ -1300,6 +1300,6 @@ button.tribe-events-c-search__button:hover {
 }
 
 .tribe-events-header__events-bar {
-    @apply border-2 rounded-lg shadow-lg !important;
+    @apply border-2 rounded-lg  !important;
     @apply p-2 !important;
 }
