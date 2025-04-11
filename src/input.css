@@ -183,6 +183,23 @@ header .currency-switch-container {
     @apply flex justify-end
 }
 
+header .wmc-current-currency-arrow::after {
+    @apply hidden;
+}
+
+header .wmc-current-currency-arrow svg {
+    @apply size-3;
+    @apply transform rotate-0;
+    @apply transition-transform duration-300 ease-in-out;
+}
+
+header .wmc-currency-wrapper:hover .wmc-current-currency-arrow  svg {
+    @apply rotate-180;
+}
+
+header .wmc-current-currency>span:first-child {
+    @apply mr-2
+}
 
 
 
@@ -1159,7 +1176,7 @@ input.tnp-submit {
 }
 
 .faq section h3 {
-    @apply  mb-3;
+    @apply mb-3;
 }
 
 
@@ -1192,18 +1209,18 @@ input.tnp-submit {
     @apply max-h-[1000px] mt-3;
 }
 
-.faq  .accordion-question .down-chevron.rotate {
+.faq .accordion-question .down-chevron.rotate {
     @apply rotate-180
 }
 
 .faq .accordion-item .accordion-question h4 {
-    @apply  text-h6 leading-[1.5rem] font-bold;
+    @apply text-h6 leading-[1.5rem] font-bold;
 }
 
 .faq .accordion-item .accordion-question:hover h4 {
-    @apply  text-gold-500;
+    @apply text-gold-500;
 }
 
-.faq .accordion-item .accordion-answer > * {
+.faq .accordion-item .accordion-answer>* {
     @apply mb-3
 }

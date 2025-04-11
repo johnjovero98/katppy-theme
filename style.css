@@ -1161,6 +1161,29 @@ header .currency-switch-container {
   justify-content: flex-end;
 }
 
+header .wmc-current-currency-arrow::after {
+  display: none;
+}
+
+header .wmc-current-currency-arrow svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header .wmc-currency-wrapper:hover .wmc-current-currency-arrow  svg {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+header .wmc-current-currency>span:first-child {
+  margin-right: .75rem;
+}
+
 /* desktop navigation */
 
 header .main-navigation.is-desktop {
@@ -3063,7 +3086,7 @@ input.tnp-submit {
   max-height: 1000px;
 }
 
-.faq  .accordion-question .down-chevron.rotate {
+.faq .accordion-question .down-chevron.rotate {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -3079,7 +3102,7 @@ input.tnp-submit {
   color: rgb(233 180 75 / var(--tw-text-opacity, 1));
 }
 
-.faq .accordion-item .accordion-answer > * {
+.faq .accordion-item .accordion-answer>* {
   margin-bottom: 1.5rem;
 }
 

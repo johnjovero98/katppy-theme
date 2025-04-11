@@ -112,4 +112,26 @@
 			siteNavigation.setAttribute('aria-hidden', 'true');
 		}
 	});
+
+
+	// customize wc-currency arrow
+	const arrow = document.querySelector('.wmc-current-currency-arrow');
+	if (arrow) {
+		const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+		svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+		svg.setAttribute("fill", "none");
+		svg.setAttribute("viewBox", "0 0 24 24");
+		svg.setAttribute("stroke-width", "1.5");
+		svg.setAttribute("stroke", "currentColor");
+
+		const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+		path.setAttribute("stroke-linecap", "round");
+		path.setAttribute("stroke-linejoin", "round");
+		path.setAttribute("d", "M19.5 8.25L12 15.75L4.5 8.25");
+
+		svg.appendChild(path);
+		arrow.appendChild(svg);
+	} else {
+		console.warn("Bestie, where is .wmc-current-currency-arrow?? 👀");
+	}
 })();
