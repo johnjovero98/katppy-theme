@@ -3239,10 +3239,60 @@ button.tribe-events-c-search__button:hover {
   padding: unset  !important;
 }
 
+/* search bar */
+
 .tribe-events-header__events-bar {
   border-radius: 0.5rem !important;
   border-width: 2px !important;
-  padding: .75rem !important;
+  padding: 5px !important;
+}
+
+/* __________ Privcay policy page styles __________ */
+
+.privacy-policy-page h1 {
+  --tw-text-opacity: 1;
+  color: rgb(250 246 243 / var(--tw-text-opacity, 1));
+  text-shadow: 1px 1px 5px rgba(29, 19, 13, .5);
+}
+
+.privacy-policy-page .entry-header {
+  display: none;
+}
+
+.privacy-policy-page h3 {
+  font-size: 1.953rem ;
+  line-height: 3rem;
+}
+
+.privacy-policy-page p {
+  margin-bottom: 1.5rem;
+}
+
+/* __________ 404 page styles __________ */
+
+.error-404 .button-404 {
+  display: inline-block;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  line-height: 3rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1));
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.error-404 .button-404:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 210 147 / var(--tw-bg-opacity, 1));
 }
 
 @media (min-width: 768px) {
@@ -3338,3 +3388,6 @@ button.tribe-events-c-search__button:hover {
     flex-direction: row;
   }
 }
+
+
+

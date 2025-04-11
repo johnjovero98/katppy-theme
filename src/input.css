@@ -1299,7 +1299,40 @@ button.tribe-events-c-search__button:hover {
     padding: unset  !important;
 }
 
+/* search bar */
 .tribe-events-header__events-bar {
     @apply border-2 rounded-lg  !important;
-    @apply p-2 !important;
+    @apply p-[5px] !important;
 }
+
+
+/* __________ Privcay policy page styles __________ */
+.privacy-policy-page h1 {
+    @apply text-off-white;
+    text-shadow: 1px 1px 5px rgba(29, 19, 13, .5);
+}
+
+.privacy-policy-page .entry-header {
+    @apply hidden;
+}
+
+
+.privacy-policy-page h3 {
+    @apply text-h4
+}
+
+.privacy-policy-page p {
+    @apply mb-3
+}
+
+/* __________ 404 page styles __________ */
+.error-404 .button-404 {
+    @apply inline-block px-4 leading-[3rem];
+    @apply font-bold text-black;
+    @apply bg-gold-500;
+    @apply border-2 border-solid border-gold-500 shadow-lg rounded-lg;
+    @apply hover:bg-gold-300;
+}
+
+
+
