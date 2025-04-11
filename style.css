@@ -3142,8 +3142,15 @@ input.tnp-submit {
 .tribe-events-single-event-title {
   text-wrap: balance;
   font-family: "Chewy", serif;
-  font-size: 3.815rem;
-  line-height: 4.5rem;
+  font-size: 1.953rem ;
+  line-height: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .tribe-events-single-event-title {
+    font-size: 3.815rem;
+    line-height: 4.5rem;
+  }
 }
 
 /* time and organizer's layout */
@@ -3191,7 +3198,8 @@ input.tnp-submit {
 
 /* add to calendat button */
 
-.tribe-common-c-btn-border {
+.tribe-common-c-btn-border,
+button.tribe-events-c-search__button {
   border-radius: 0.5rem !important;
   padding: 0px !important;
   padding-left: 1.5rem !important;
@@ -3207,7 +3215,12 @@ input.tnp-submit {
   border-color: rgb(233 180 75 / var(--tw-border-opacity, 1)) !important;
 }
 
-.tribe-common-c-btn-border:hover {
+button.tribe-events-c-search__button {
+  margin-right: .75rem;
+}
+
+.tribe-common-c-btn-border:hover,
+button.tribe-events-c-search__button:hover {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(242 210 147 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
@@ -3220,6 +3233,19 @@ input.tnp-submit {
 
 .tribe-events-single-event-description > * {
   max-width: 70rem;
+}
+
+.tribe-events .tribe-events-l-container {
+  padding: unset  !important;
+}
+
+.tribe-events-header__events-bar {
+  border-radius: 0.5rem !important;
+  border-width: 2px !important;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+  padding: .75rem !important;
 }
 
 @media (min-width: 768px) {
