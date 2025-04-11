@@ -1175,7 +1175,7 @@ header .wmc-current-currency-arrow svg {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-header .wmc-currency-wrapper:hover .wmc-current-currency-arrow  svg {
+header .wmc-currency-wrapper:hover .wmc-current-currency-arrow svg {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -3104,6 +3104,122 @@ input.tnp-submit {
 
 .faq .accordion-item .accordion-answer>* {
   margin-bottom: 1.5rem;
+}
+
+/* __________ events-page styles __________ */
+
+/* month title */
+
+.tribe-events-calendar-list__month-separator-text {
+  font-size: 1.563rem !important;
+  line-height: 3rem !important;
+}
+
+@media (min-width: 1024px) {
+  .tribe-events-calendar-list__month-separator-text {
+    font-size: 2.441rem !important;
+    line-height: 3rem !important;
+  }
+}
+
+/* event img */
+
+.tribe-events-calendar-list__event-featured-image,
+#tribe-events img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 0.5rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* single event title */
+
+.tribe-events-single-event-title {
+  text-wrap: balance;
+  font-family: "Chewy", serif;
+  font-size: 3.815rem;
+  line-height: 4.5rem;
+}
+
+/* time and organizer's layout */
+
+.tribe-events-event-meta.primary {
+  white-space: nowrap;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .tribe-events-event-meta.primary {
+    width: 50%;
+  }
+}
+
+/* venue layout */
+
+.tribe-events-event-meta.secondary {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .tribe-events-event-meta.secondary {
+    width: 50%;
+  }
+}
+
+/* venue map */
+
+.tribe-events-venue-map {
+  order: 1;
+  margin: 0px;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+/*  event details heading title */
+
+.tribe-events-meta-group .tribe-events-single-section-title {
+  margin: 0px;
+  font-size: 1.563rem;
+  line-height: 3rem;
+}
+
+/* add to calendat button */
+
+.tribe-common-c-btn-border {
+  border-radius: 0.5rem !important;
+  padding: 0px !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  line-height: 3rem !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(233 180 75 / var(--tw-bg-opacity, 1)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1)) !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1)) !important;
+}
+
+.tribe-common-c-btn-border:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(242 210 147 / var(--tw-bg-opacity, 1)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(29 19 13 / var(--tw-text-opacity, 1)) !important;
+}
+
+.tribe-events-event-meta dt {
+  font-weight: 700;
+}
+
+.tribe-events-single-event-description > * {
+  max-width: 70rem;
 }
 
 @media (min-width: 768px) {

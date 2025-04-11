@@ -193,7 +193,7 @@ header .wmc-current-currency-arrow svg {
     @apply transition-transform duration-300 ease-in-out;
 }
 
-header .wmc-currency-wrapper:hover .wmc-current-currency-arrow  svg {
+header .wmc-currency-wrapper:hover .wmc-current-currency-arrow svg {
     @apply rotate-180;
 }
 
@@ -1223,4 +1223,68 @@ input.tnp-submit {
 
 .faq .accordion-item .accordion-answer>* {
     @apply mb-3
+}
+
+/* __________ events-page styles __________ */
+
+/* month title */
+.tribe-events-calendar-list__month-separator-text {
+    @apply text-h5 lg:text-h3 !important;
+}
+
+/* event img */
+.tribe-events-calendar-list__event-featured-image,
+#tribe-events img {
+    @apply w-full max-w-[700px];
+    @apply rounded-lg shadow-lg;
+    @apply aspect-[4/3] object-cover;
+}
+
+/* single event title */
+.tribe-events-single-event-title {
+    @apply font-heading text-h1 text-balance;
+}
+
+/* time and organizer's layout */
+.tribe-events-event-meta.primary {
+    @apply whitespace-nowrap;
+    @apply w-full lg:w-1/2
+}
+
+/* venue layout */
+.tribe-events-event-meta.secondary {
+    @apply w-full;
+    @apply flex-wrap;
+    @apply w-full lg:w-1/2
+}
+
+/* venue map */
+.tribe-events-venue-map {
+    @apply m-0 w-full order-1 pb-3;
+}
+
+/*  event details heading title */
+.tribe-events-meta-group .tribe-events-single-section-title {
+    @apply m-0 text-h5
+}
+
+/* add to calendat button */
+.tribe-common-c-btn-border {
+    @apply p-0 px-3 leading-[3rem] rounded-lg !important;
+    @apply text-black bg-gold-500 !important;
+    @apply border-2 border-solid border-gold-500 !important;
+}
+
+.tribe-common-c-btn-border:hover {
+    @apply bg-gold-300 text-black !important;
+
+}
+
+.tribe-events-event-meta dt {
+    @apply font-bold;
+
+}
+
+.tribe-events-single-event-description > *{
+    @apply max-w-[70rem]
 }
