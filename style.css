@@ -1028,6 +1028,78 @@ header nav.main-navigation.is-desktop .sub-menu>.menu-item>a:hover {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+/* desktop navigation */
+
+header .main-navigation.is-desktop {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+header .main-navigation.is-desktop .search-bar-container {
+  flex-grow: 1;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container {
+  order: -1;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item {
+  position: relative;
+}
+
+header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item .sub-menu {
+  position: absolute;
+  top: 100%;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-width: 5px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
+  z-index: 10;
+  display: none;
+}
+
+header .main-navigation.is-desktop .menu-item-has-children {
+  display: flex;
+  align-items: center;
+}
+
+header .menu-item-has-children .down-chevron {
+  width: 1.5rem;
+  height: 1.5rem;
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* toggle sub menu on hover */
+
+header .main-navigation.is-desktop .menu-item-has-children:hover .down-chevron {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
+  display: block !important;
+}
+
 /* mobile navigation */
 
 .overlay {
@@ -1184,78 +1256,6 @@ header .wmc-current-currency>span:first-child {
   margin-right: .5rem;
 }
 
-/* desktop navigation */
-
-header .main-navigation.is-desktop {
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-grow: 1;
-}
-
-header .main-navigation.is-desktop .search-bar-container {
-  flex-grow: 1;
-}
-
-header .main-navigation.is-desktop .menu-navigation-links-container {
-  order: -1;
-}
-
-header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item {
-  position: relative;
-}
-
-header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item .sub-menu {
-  position: absolute;
-  top: 100%;
-  white-space: nowrap;
-  border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  border-width: 5px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(233 180 75 / var(--tw-border-opacity, 1));
-  z-index: 10;
-  display: none;
-}
-
-header .main-navigation.is-desktop .menu-item-has-children {
-  display: flex;
-  align-items: center;
-}
-
-header .menu-item-has-children .down-chevron {
-  width: 1.5rem;
-  height: 1.5rem;
-  --tw-rotate: 0deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  transition-property: transform;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* toggle sub menu on hover */
-
-header .main-navigation.is-desktop .menu-item-has-children:hover .down-chevron {
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
-  display: block !important;
-}
-
 /* ___________Footer styles____________ */
 
 footer h3 {
@@ -1393,12 +1393,12 @@ input.tnp-submit {
 }
 
 .home-page .hero-cta {
-  background-image: url(https://katppy.com/wp-content/themes/katppy-theme/images/hero-bg-paper-mobile.png);
+  background-image: url(https://katppy.com/wp-content/themes/katppy-theme/images/hero-bg-paper-mobile.webp);
 }
 
 @media (min-width: 1024px) {
   .home-page .hero-cta {
-    background-image: url(https://katppy.com/wp-content/themes/katppy-theme/images/hero-bg-paper-desktop.png);
+    background-image: url(https://katppy.com/wp-content/themes/katppy-theme/images/hero-bg-paper-desktop.webp);
     background-size: cover;
   }
 }
@@ -3231,12 +3231,12 @@ button.tribe-events-c-search__button:hover {
   font-weight: 700;
 }
 
-.tribe-events-single-event-description > * {
+.tribe-events-single-event-description>* {
   max-width: 70rem;
 }
 
 .tribe-events .tribe-events-l-container {
-  padding: unset  !important;
+  padding: unset !important;
 }
 
 /* search bar */
@@ -3388,6 +3388,3 @@ button.tribe-events-c-search__button:hover {
     flex-direction: row;
   }
 }
-
-
-

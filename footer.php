@@ -16,7 +16,7 @@
 <section class="bg-gold-100 relative mt-[162px]">
 	<div class="container mx-auto px-3 py-5">
 		<div class="newsletter-img">
-			<img src="<?php echo get_template_directory_uri() ?>/images/newsletter-img.png" alt="graphic image of an open envelope with cat paw print">
+			<img src="<?php echo get_template_directory_uri() ?>/images/newsletter-img.webp" alt="graphic image of an open envelope with cat paw print">
 		</div>
 
 		<h2 class="text-h3 lg:text-h2 font-bold text-center">Get Updated!</h2>
@@ -60,7 +60,7 @@
 <footer id="colophon" class="site-footer bg-gold-500">
 	<div class="container mx-auto px-3 py-4 flex flex-col gap-3 lg:flex-row justify-between flex-wrap">
 		<div class="max-w-[281px]">
-			<img src="<?php echo get_template_directory_uri() ?>/images/katppy-logo.png" alt="katppy logo">
+			<img src="<?php echo get_template_directory_uri() ?>/images/katppy-logo.webp" alt="katppy logo">
 		</div>
 
 		<div class="flex flex-col gap-3 lg:flex-row lg:gap-7 justify-between">
@@ -83,7 +83,7 @@
 					<?php dynamic_sidebar('social-media-links'); ?>
 
 					<div class="max-w-[168px]">
-						<img src="<?php echo get_template_directory_uri() ?>/images/stripe-pmt-logos.png" alt="stripe payment logos">
+						<img src="<?php echo get_template_directory_uri() ?>/images/stripe-pmt-logos.webp" alt="stripe payment logos">
 					</div>
 				</div>
 			</div>

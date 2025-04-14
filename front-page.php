@@ -20,7 +20,7 @@ get_header();
 	<!-- Hero Banner -->
 	<div class="hero-banner relative">
 		<div class="hero-img w-full">
-			<img class="object-cover w-full h-full" src="<?php echo get_template_directory_uri() ?>/images/hero-img-charms.jpg" alt="images of bear shaped charms">
+			<img class="object-cover w-full h-full" src="<?php echo get_template_directory_uri() ?>/images/hero-img-charms.webp" alt="images of bear shaped charms">
 		</div>
 
 		<div class="hero-cta">
@@ -29,7 +29,7 @@ get_header();
 				<p class="mb-3 text-p md:text-h5 leading-[1.5rem] font-medium text-balance">Bring your cute and creative projects to life!</p>
 				<a class="cta-btn" href="<?php echo get_site_url(null,'shop') ?>">Shop Here</a>
 				<div class="paw-sticker">
-					<img src="<?php echo get_template_directory_uri() ?>/images/paw-sticker.png" alt="graphic image of a paw sticker style">
+					<img src="<?php echo get_template_directory_uri() ?>/images/paw-sticker.webp" alt="graphic image of a paw sticker style">
 				</div>
 			</div>
 		</div>
@@ -88,7 +88,7 @@ get_header();
 	<!-- pop-up store section -->
 	<section class="farmers-market container mx-auto">
 		<div class="cat-img-container">
-			<img src="<?php echo get_template_directory_uri() ?>/images/cat-shopping.png" alt="graphic image of a cat holding a shopping">
+			<img src="<?php echo get_template_directory_uri() ?>/images/cat-shopping.webp" alt="graphic image of a cat holding a shopping">
 		</div>
 
 		<div class="farmers-market-cta flex items-center">
@@ -100,7 +100,7 @@ get_header();
 		</div>
 
 		<div class="farmers-market-img-container">
-			<img src="<?php echo get_template_directory_uri() ?>/images/farmers-market.png" alt="image of farmers' market">
+			<img src="<?php echo get_template_directory_uri() ?>/images/farmers-market.webp" alt="image of farmers' market">
 		</div>
 	</section>
 
