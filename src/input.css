@@ -152,10 +152,12 @@ header .mobile-navigation {
     @apply transition-all ease-in-out duration-300;
     @apply max-w-[500px];
     @apply flex flex-col gap-3;
+    @apply overflow-y-auto;
 }
 
 header .mobile-navigation.show-navigation {
     @apply right-0;
+    @apply lg:hidden;
 }
 
 header .mobile-navigation .currency-switch-container {
@@ -164,6 +166,42 @@ header .mobile-navigation .currency-switch-container {
 
 header .mobile-navigation #close-button {
     @apply flex justify-end;
+}
+
+/* mobile menu list styles  */
+header .mobile-navigation .menu-navigation-links-container #primary-menu a {
+    @apply inline-block leading-[3rem];
+    @apply hover:underline;
+}
+header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children {
+    @apply flex flex-wrap items-center justify-between;
+}
+
+header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children > .sub-menu {
+    @apply order-1;
+    @apply max-h-0 w-full overflow-hidden;
+    @apply transition-all ease-in-out duration-300;
+}
+
+
+
+header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children > .sub-menu.show-sub-menu {
+    @apply max-h-[500px];
+    @apply bg-gold-100 border-gold-300 border-solid border-4;
+    @apply rounded-lg px-2;
+}
+
+/* down chevron rotation */
+header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children > .down-chevron {
+    @apply rotate-0;
+    @apply p-[4px] rounded-full;
+    @apply bg-gold-300;
+    @apply transition-all ease-in-out duration-300;
+    @apply cursor-pointer
+}
+
+header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children > .show-sub-menu + .down-chevron {
+    @apply rotate-180;
 }
 
 

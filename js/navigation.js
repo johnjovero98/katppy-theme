@@ -35,7 +35,7 @@
 	menuToggleButton.setAttribute('aria-expanded', 'false');
 	menuToggleButton.setAttribute('aria-controls', 'mobile-site-navigation');
 	mobileMenu.setAttribute('aria-hidden', 'true');
-	mobileMenu.setAttribute('role', 'navigation'); 
+	mobileMenu.setAttribute('role', 'navigation');
 
 	// invoke toggle
 	toggleMobileNavigation(menuToggleButton);
@@ -44,8 +44,16 @@
 
 
 	// mobile sub menu toggle;
-	
+	const mobileSubMenu = document.querySelector('#mobile-site-navigation #primary-menu > .menu-item-has-children > .sub-menu')
+	const mobileSubMenuButton = document.querySelector('#mobile-site-navigation #primary-menu > .menu-item-has-children > .down-chevron')
 
+	mobileSubMenuButton.addEventListener('click', function () {
+		mobileSubMenu.classList.toggle('show-sub-menu')
+		console.log('button is clicked')
+	})
+
+	console.log(mobileSubMenu)
+	console.log(mobileSubMenuButton)
 })();
 
 
