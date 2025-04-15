@@ -68,152 +68,93 @@ header .wc-block-mini-cart__button .wc-block-mini-cart__badge {
     @apply bg-gold-500 text-black;
 }
 
-
-/* menu  button */
+/* toggles on window resize */
+/* menu  button  */
 header .menu-toggle {
     @apply block lg:hidden;
 }
 
-/* nav links  */
-header nav a {
-    @apply leading-[3rem];
+header .mobile-navigation {
+    @apply block lg:hidden;
+    @apply bg-gold-500;
 }
 
-header nav.main-navigation.is-mobile a,
-header nav.main-navigation.is-desktop #primary-menu>.menu-item>a,
-footer .product-links a,
-footer .site-links a {
-    @apply hover:underline;
+header .desktop-navigation {
+    @apply hidden lg:flex lg:items-center;
+    @apply w-full gap-3;
 }
 
-header nav.main-navigation.is-desktop .sub-menu {
-    @apply shadow-lg;
+/* chevron default size */
+header .down-chevron {
+    @apply size-3;
 }
 
-header nav.main-navigation.is-desktop .sub-menu>.menu-item>a {
-    @apply hover:bg-black hover:text-white rounded-lg;
-    @apply px-2 leading-[3rem] block;
-    @apply transition ease-in-out hover:translate-x-2 hover:scale-110 duration-300;
+
+/* desktop navigation styles */
+header .desktop-navigation .menu-navigation-links-container {
+    @apply -order-1;
 }
 
-/* desktop navigation */
-header .main-navigation.is-desktop {
-    @apply bg-transparent;
-    @apply flexm items-center gap-3 grow; 
+header .desktop-navigation .menu-navigation-links-container #primary-menu {
+    @apply flex gap-3;
 }
 
-header .main-navigation.is-desktop .search-bar-container {
-    @apply flex-grow;
+header .desktop-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children {
+    @apply flex items-center;
+    @apply relative
 }
 
-header .main-navigation.is-desktop .menu-navigation-links-container {
-    @apply -order-1
-}
-
-header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu {
-    @apply flex gap-3 items-center;
-}
-
-header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item {
-    @apply relative;
-}
-
-header .main-navigation.is-desktop .menu-navigation-links-container>#primary-menu>.menu-item .sub-menu {
-    @apply absolute whitespace-nowrap bg-gold-100 rounded-lg shadow-lg top-full;
-    @apply border-[5px] border-gold-500 border-solid;
+header .desktop-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children>.sub-menu {
+    @apply absolute top-full;
+    @apply whitespace-nowrap;
+    @apply bg-gold-100;
+    @apply border-4 border-gold-500 shadow-lg rounded-lg;
     @apply z-10;
     @apply hidden;
+
 }
 
-header .main-navigation.is-desktop .menu-item-has-children {
-    @apply flex items-center;
+header .desktop-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children:hover>.sub-menu {
+    @apply block;
 }
 
-header .menu-item-has-children .down-chevron {
-    @apply size-3;
-    @apply transform rotate-0;
-    @apply transition-transform duration-300 ease-in-out;
+/* down chevron rotate on hover */
+header .desktop-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children>.down-chevron {
+    @apply rotate-0;
+    @apply transition-all ease-in-out duration-300;
 }
 
-/* toggle sub menu on hover */
-header .main-navigation.is-desktop .menu-item-has-children:hover .down-chevron {
+header .desktop-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children:hover>.down-chevron {
     @apply rotate-180;
 }
 
-header .main-navigation.is-desktop .menu-item-has-children:hover .sub-menu {
-    display: block !important;
+/* desktop sub menu styles */
+header .desktop-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children>.sub-menu a {
+    @apply px-2 leading-[3rem] block rounded-lg;
+    @apply hover:bg-black hover:text-white;
+    @apply transition ease-in-out hover:translate-x-2 hover:scale-110 duration-300;
 }
 
 
-/* mobile navigation */
-.overlay {
-    @apply transition-all duration-300 ease-in-out;
-    @apply hidden;
+
+/* mobile navigation styles */
+
+
+
+/* header nav.main-navigation .sub-menu {
+    @apply shadow-lg;
 }
 
-.overlay.show-overlay {
-    @apply block;
-    @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10;
-    @apply cursor-pointer;
-    @apply lg:hidden;
-}
+header nav.main-navigation .sub-menu>.menu-item>a {
+    @apply hover:bg-black hover:text-white rounded-lg;
+    @apply px-2 leading-[3rem] block;
+    @apply transition ease-in-out hover:translate-x-2 hover:scale-110 duration-300;
+} */
 
 
-header .main-navigation.is-mobile {
-    @apply bg-gold-500 p-3;
-    @apply fixed top-0 -right-full w-full h-[100dvh] max-w-[500px] z-20;
-    @apply transition-all duration-300 ease-in-out;
-    @apply overflow-y-scroll;
-
-    /* layout */
-    @apply flex flex-col gap-3;
-}
-
-header .main-navigation.is-mobile.show-mobile-menu {
-    @apply right-0;
-}
-
-header .main-navigation.is-mobile #close-button {
-    order: 0;
-    @apply flex justify-end;
-}
-
-header .main-navigation.is-mobile .currency-switch-container {
-    order: 1;
-}
-
-header .main-navigation.is-mobile li.menu-item {
-    @apply leading-[3rem];
-}
-
-header .main-navigation.is-mobile li.menu-item-has-children {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .main-navigation.is-mobile li.menu-item-has-children svg {
-    @apply p-[3px] rounded-full bg-gold-300;
-    @apply rotate-0;
-    @apply transition-all duration-300 ease-in-out;
-}
-
-header .main-navigation.is-mobile ul.sub-menu {
-    width: 100%;
-    order: 1;
-    @apply max-h-0 overflow-hidden;
-    @apply transition-all duration-300 ease-in-out;
-    @apply px-2 bg-gold-100 rounded-lg shadow-inner;
-}
-
-header .main-navigation.is-mobile ul.show-sub-menu {
-    @apply block max-h-[500px];
-    @apply border-[5px] border-gold-300 border-solid;
-}
-
-header .main-navigation.is-mobile ul.show-sub-menu+svg {
-    @apply rotate-180
+/* header search bar styles */
+header .search-bar-container {
+    @apply w-full
 }
 
 /* currency switcher styles */

@@ -40,14 +40,14 @@
 		<header id="masthead" class="site-header shadow-lg">
 			<div class="container mx-auto p-3 flex justify-between items-center gap-3">
 				<!-- Navigation button -->
-				<button id="menu-toggle" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">
+				<button id="menu-toggle" class="menu-toggle">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 					</svg>
 				</button>
 
 				<!-- Site Logo -->
-				<div class="site-branding max-w-[9rem] lg:mr-[3rem] xl:mr-[6rem]">
+				<div class="site-branding max-w-[9rem] lg:mr-[3rem]">
 					<?php
 					the_custom_logo();
 					if (is_front_page() && is_home()) :
@@ -67,9 +67,9 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 
-				<!-- Navigation -->
-				<div id="overlay" class="overlay"></div><!-- mobile overlay -->
-				<nav id="site-navigation" class="main-navigation" aria-hidden="true">
+				<!-- Mobile Navigation -->
+				<div id="mobile-nav-overlay" class="overlay"></div><!-- mobile overlay -->
+				<nav id="mobile-site-navigation" class="mobile-navigation">
 					<!-- close button -->
 					<button id="close-button" class="lg:hidden" aria-controls="site-navigation" aria-expanded="false">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
@@ -92,9 +92,29 @@
 						)
 					);
 					?>
-				</nav><!-- #site-navigation -->
+				</nav>
+
+
+				<!-- Desktop Navigation -->
+				<nav id="desktop-site-navigation" class="desktop-navigation">
+					<!-- Search Bar Widget -->
+					<?php dynamic_sidebar('search-bar') ?>
+
+					<!-- Currency Switch Widget -->
+					<?php dynamic_sidebar('currency-switch') ?>
+
+					<!-- Menu -->
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?>
+				</nav>
 
 				<!-- Cart Widget -->
 				<?php dynamic_sidebar('mini-cart') ?>
 			</div>
-		</header><!-- #masthead -->
+		</header>
