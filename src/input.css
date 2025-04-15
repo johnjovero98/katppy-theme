@@ -68,20 +68,9 @@ header .wc-block-mini-cart__button .wc-block-mini-cart__badge {
     @apply bg-gold-500 text-black;
 }
 
-/* toggles on window resize */
 /* menu  button  */
 header .menu-toggle {
     @apply block lg:hidden;
-}
-
-header .mobile-navigation {
-    @apply block lg:hidden;
-    @apply bg-gold-500;
-}
-
-header .desktop-navigation {
-    @apply hidden lg:flex lg:items-center;
-    @apply w-full gap-3;
 }
 
 /* chevron default size */
@@ -89,8 +78,12 @@ header .down-chevron {
     @apply size-3;
 }
 
-
 /* desktop navigation styles */
+header .desktop-navigation {
+    @apply hidden lg:flex lg:items-center;
+    @apply w-full gap-3;
+}
+
 header .desktop-navigation .menu-navigation-links-container {
     @apply -order-1;
 }
@@ -138,19 +131,30 @@ header .desktop-navigation .menu-navigation-links-container #primary-menu>.menu-
 
 
 /* mobile navigation styles */
-
-
-
-/* header nav.main-navigation .sub-menu {
-    @apply shadow-lg;
+header .overlay {
+    @apply hidden
 }
 
-header nav.main-navigation .sub-menu>.menu-item>a {
-    @apply hover:bg-black hover:text-white rounded-lg;
-    @apply px-2 leading-[3rem] block;
-    @apply transition ease-in-out hover:translate-x-2 hover:scale-110 duration-300;
-} */
+header .overlay.show-overlay {
+    @apply block lg:hidden;
+    @apply fixed bg-black opacity-80 z-[39];
+    @apply top-0 left-0;
+    @apply w-full h-[100dvh];
+    @apply cursor-pointer;
+}
 
+header .mobile-navigation {
+    @apply block lg:hidden;
+    @apply bg-gold-500;
+    @apply fixed z-40 top-0 -right-full;
+    @apply h-[100dvh] w-full p-3;
+    @apply transition-all ease-in-out duration-300;
+    @apply max-w-[500px];
+}
+
+header .mobile-navigation.show-navigation {
+    @apply right-0
+}
 
 /* header search bar styles */
 header .search-bar-container {
