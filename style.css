@@ -589,8 +589,8 @@ video {
   position: relative;
 }
 
-.top-\[135px\] {
-  top: 135px;
+.top-\[3rem\] {
+  top: 3rem;
 }
 
 .z-20 {
@@ -1182,32 +1182,32 @@ header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-i
   justify-content: space-between;
 }
 
-header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children > .sub-menu {
+header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children>.sub-menu {
   order: 1;
   max-height: 0px;
   width: 100%;
   overflow: hidden;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
+  padding-left: .75rem;
+  padding-right: .75rem;
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children > .sub-menu.show-sub-menu {
+header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children>.sub-menu.show-sub-menu {
   max-height: 500px;
   border-width: 4px;
   border-style: solid;
   --tw-border-opacity: 1;
   border-color: rgb(242 210 147 / var(--tw-border-opacity, 1));
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 240 219 / var(--tw-bg-opacity, 1));
-  border-radius: 0.5rem;
-  padding-left: .75rem;
-  padding-right: .75rem;
 }
 
 /* down chevron rotation */
 
-header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children > .down-chevron {
+header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children>.down-chevron {
   --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 9999px;
@@ -1220,7 +1220,7 @@ header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-i
   cursor: pointer;
 }
 
-header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children > .show-sub-menu + .down-chevron {
+header .mobile-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children>.show-sub-menu+.down-chevron {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }

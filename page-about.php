@@ -19,9 +19,9 @@ get_header();
 <main id="primary" class="site-main about px-3">
 	<div class="container mx-auto py-3 flex flex-col md:flex-row gap-4">
 		
-		<aside class="md:sticky h-fit top-[135px]">
+		<aside class="md:sticky h-fit top-[3rem]">
 			<div>
-				<img class="rounded-lg shadow-xl border border-gray-100  max-w-full md:max-w-[250px]" src="<?php echo get_template_directory_uri() ?>/images/kat.jpg" alt="image of Kat wrapped in a blanket">
+				<img class="rounded-lg shadow-xl border border-gray-100  max-w-full md:max-w-[250px]" src="<?php echo get_template_directory_uri() ?>/images/kat.webp" alt="image of Kat wrapped in a blanket">
 			</div>
 
 			<h2>Kat</h2>
