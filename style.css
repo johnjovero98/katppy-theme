@@ -667,20 +667,16 @@ video {
   height: 100%;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
 .w-\[50px\] {
   width: 50px;
 }
 
-.w-\[70\%\] {
-  width: 70%;
-}
-
 .w-full {
   width: 100%;
-}
-
-.w-\[50\%\] {
-  width: 50%;
 }
 
 .max-w-\[168px\] {
@@ -2765,8 +2761,8 @@ input.tnp-submit {
 
 /* ___________Cart page styles____________ */
 
-.cart-page h1,
-.checkout-page h1 {
+.cart-page h2,
+.checkout-page h2 {
   margin-bottom: 3rem;
   font-size: 2.441rem;
   line-height: 3rem;
