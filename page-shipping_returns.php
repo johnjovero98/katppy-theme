@@ -22,8 +22,8 @@ get_header();
 
 	<div class="flex flex-col lg:flex-row gap-4 items-start container mx-auto px-3">
 		<picture class="lg:order-1 lg:sticky lg:top-[3rem]">
-			<source media="(min-width:1024px)" srcset="<?php echo get_template_directory_uri() ?>/images/orange-box-cat.png">
-			<img class="w-full" src="<?php echo get_template_directory_uri() ?>/images/cat-in-box.png" alt="Cat in a box.">
+			<source media="(min-width:1024px)" srcset="<?php echo get_template_directory_uri() ?>/images/orange-box-cat.webp">
+			<img class="w-full" src="<?php echo get_template_directory_uri() ?>/images/cat-in-box.webp" alt="Cat in a box.">
 		</picture>
 
 

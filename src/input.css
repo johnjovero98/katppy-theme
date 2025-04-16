@@ -672,7 +672,7 @@ input.tnp-submit {
 }
 
 .contact-page .contact-form {
-    @apply bg-[url(https://katppy.com/wp-content/themes/katppy-theme/images/contact-cat.jpg)];
+    @apply bg-[url(https://katppy.com/wp-content/themes/katppy-theme/images/contact-cat.webp)];
     @apply bg-cover relative p-3 md:p-4;
     @apply text-white;
     @apply rounded-lg shadow-xl;

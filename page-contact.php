@@ -19,9 +19,9 @@ get_header();
 <main id="primary" class="site-main contact-page text-p">
 
     <div class="container mx-auto px-3 py-4">
-        <div class="flex flex-col xl:flex-row gap-4">
+        <div class="flex flex-col xl:flex-row xl:items-start gap-4">
             <!-- contact instructions -->
-            <section class="xl:w-1/2">
+            <section class="xl:w-1/2 xl:sticky xl:top-[3rem]">
                 <h2>Get in Touch</h2>
                 <p>If you have any inquiries about our products, store policies or shipping– please call, email or fill out the provided form.</p>
                 <p>We’ll get back to you as soon as possible!</p>
@@ -29,7 +29,7 @@ get_header();
                 <p><strong>Phone:</strong> +1 825 436 6499</p>
 
                 <div class="flex justify-center">
-                    <img class="w-[70%]" src="<?php echo get_template_directory_uri() ?>/images/bongo-cat-keyboard.png" alt="graphic image of a cat typing on a keyboard">
+                    <img class="w-[50%]" src="<?php echo get_template_directory_uri() ?>/images/bongo-cat-keyboard.webp" alt="graphic image of a cat typing on a keyboard">
                 </div>
             </section>
 
