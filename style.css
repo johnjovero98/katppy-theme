@@ -801,11 +801,6 @@ video {
   padding-right: 1.5rem;
 }
 
-.py-3 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .py-4 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -1011,6 +1006,10 @@ header .desktop-navigation .menu-navigation-links-container {
 header .desktop-navigation .menu-navigation-links-container #primary-menu {
   display: flex;
   gap: 1.5rem;
+}
+
+header .desktop-navigation .menu-navigation-links-container #primary-menu > li.menu-item > a:hover {
+  text-decoration-line: underline;
 }
 
 header .desktop-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children {
@@ -1275,6 +1274,10 @@ footer h3 {
   font-size: 1.563rem;
   line-height: 3rem;
   font-weight: 700;
+}
+
+footer a:hover {
+  text-decoration-line: underline;
 }
 
 footer .wp-block-social-links .wp-block-social-link.wp-social-link {

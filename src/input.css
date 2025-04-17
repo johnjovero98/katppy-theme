@@ -92,6 +92,10 @@ header .desktop-navigation .menu-navigation-links-container #primary-menu {
     @apply flex gap-3;
 }
 
+header .desktop-navigation .menu-navigation-links-container #primary-menu > li.menu-item > a {
+    @apply hover:underline;
+}
+
 header .desktop-navigation .menu-navigation-links-container #primary-menu>.menu-item-has-children {
     @apply flex items-center;
     @apply relative
@@ -243,6 +247,10 @@ header .wmc-current-currency>span:first-child {
 /* ___________Footer styles____________ */
 footer h3 {
     @apply text-h5 font-bold;
+}
+
+footer a {
+    @apply hover:underline;
 }
 
 footer .wp-block-social-links .wp-block-social-link.wp-social-link {
